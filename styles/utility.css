@@ -5,8 +5,18 @@
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   background-color: var(--orange);
   padding: 0.625rem 1.5rem;
   border-radius: 0.625rem;
+  align-items: center;
+  gap: .5rem;
+
+  & svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    line-height: 0;
+  }
 }

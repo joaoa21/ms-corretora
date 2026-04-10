@@ -1,12 +1,12 @@
 header {
-  background-color: var(--navy);
+  background-color: var(--navy-dk);
   color: var(--gray);
   padding-block: 1.25rem;
   
   & nav {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 2rem;
   }
   
   & a{
