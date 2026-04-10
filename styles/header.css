@@ -1,0 +1,21 @@
+header {
+  background-color: var(--navy);
+  color: var(--gray);
+  padding-block: 1.25rem;
+  
+  & nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  
+  & a{
+    & img {
+      width: 12.5rem;
+    }
+  }
+
+  & a:first-child {
+    margin-right: auto;
+  }
+}
