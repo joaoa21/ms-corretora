@@ -1,16 +1,31 @@
 .container {
-  max-width: 80rem;
+  max-width: 86rem;
   margin: 0 auto;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
+}
+
+.mobile-hidden {
+  display: none;
 }
 
 .btn {
   display: inline-flex;
+
   background-color: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+
   padding: 0.625rem 1.5rem;
   border-radius: 0.625rem;
   align-items: center;
   gap: .5rem;
+
+  transition: background .5s ease, transform .5s ease;
+
+  &:hover {
+    background-color: var(--orange-lt);
+    transform: translateY(-2px);
+  }
 
   & svg {
     display: block;
@@ -19,4 +34,52 @@
     flex-shrink: 0;
     line-height: 0;
   }
+
+  &.secondary {
+    background-color: transparent;
+    outline: 1px solid var(--gray);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: var(--orange);
+  margin-bottom: 0.875rem;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -1px;
+  margin-bottom: 0.875rem;
+  max-width: 35rem;
+  margin-inline: auto;
+
+  & span {
+    color: var(--orange);
+    text-transform: uppercase;
+  }
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 32.5rem;
+  line-height: 1.65;
+  margin: 0 auto;
+}
+
+@media (width >= 80em) {
+  .mobile-hidden {
+    display: initial;
+  }
+  
 }

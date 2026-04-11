@@ -14,14 +14,14 @@
     & .left-hero {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 2rem;
       margin-right: auto;
-      max-width: 500px;
+      max-width: 31.25rem;
       color: var(--white);
 
       & .hero-text {
         & h1 {
-          font-size: 3.8rem;
+          font-size: 4.2rem;
           font-weight: 900;
           margin-bottom: 1.25rem;
 
@@ -51,6 +51,28 @@
         border-top: 1px solid #ffffff20;
         margin: 1rem 0;
       }
+
+      & .hero-stats {
+        display: flex;
+        gap: 2rem;
+
+        & .stat {
+          display: flex;
+          flex-direction: column;
+
+          & strong {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            color: var(--orange);
+            font-size: 1.75rem;
+            font-weight: 900;
+          }
+
+          & span {
+            color: var(--muted);
+            font-size: 0.875rem;
+          }
+        }
+      }
     }
   }
 
@@ -59,20 +81,20 @@
   }
 
   img {
-    width: 250px;
-    height: 250px;
+    width: 15.625rem;
+    height: 18.75rem;
     object-fit: cover;
 
     &.p1 {
-      border-radius: 15px 60px 15px 15px;
+      border-radius: 0.9375rem 3.75rem 0.9375rem 0.9375rem;
     }
 
     &.p2 {
-      border-radius: 60px 15px 15px 15px;
+      border-radius: 3.75rem 0.9375rem 0.9375rem 0.9375rem;
     }
 
     &.p3 {
-      border-radius: 15px 15px 60px 15px;
+      border-radius: 0.9375rem 0.9375rem 3.75rem 0.9375rem;
     }
   }
 }

@@ -1,12 +1,35 @@
 header {
   background-color: var(--navy-dk);
-  color: var(--gray);
   padding-block: 1.25rem;
   
   & nav {
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    & a:not(.btn, :first-child) {
+      color: var(--muted);
+      transition: color .5s ease;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px; left:0; right: 0;
+        height: 2px;
+        background-color: var(--orange);
+        transform: scaleX(0);
+        transition: transform .3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+
+    & a:not(.btn):hover {
+      color: white;
+    }
   }
   
   & a{

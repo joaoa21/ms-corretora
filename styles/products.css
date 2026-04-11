@@ -1,0 +1,9 @@
+#products {
+  padding-block: 5rem;
+
+  & .products-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin: 0 auto;
+  }
+}
