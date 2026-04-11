@@ -15,12 +15,16 @@
   color: var(--white);
   font-weight: 600;
 
-  padding: 0.625rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 0.625rem;
   align-items: center;
   gap: .5rem;
 
   transition: background .5s ease, transform .5s ease;
+
+  &.btn-sm {
+    padding: 0.625rem 1.5rem;
+  }
 
   &:hover {
     background-color: var(--orange-lt);
@@ -77,7 +81,7 @@
   margin: 0 auto;
 }
 
-@media (width >= 80em) {
+@media (width >= 62.5rem) {
   .mobile-hidden {
     display: initial;
   }

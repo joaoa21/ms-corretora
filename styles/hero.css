@@ -16,7 +16,7 @@
       flex-direction: column;
       gap: 2rem;
       margin-right: auto;
-      max-width: 31.25rem;
+      max-width: 29rem;
       color: var(--white);
 
       & .hero-text {
@@ -41,9 +41,6 @@
       & .hero-action {
         display: flex;
         gap: 1.25rem;
-        & .btn {
-          padding-block: 1rem;
-        }
       }
 
       & hr {
