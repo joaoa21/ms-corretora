@@ -1,11 +1,13 @@
 .s-hero {
-  background-image: url(../assets/background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
+  position: relative;
+  overflow: hidden;
 
   padding-block: 7.5rem;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 
   .hero-inner {
     display: flex;
@@ -94,4 +96,44 @@
       border-radius: 0.9375rem 0.9375rem 3.75rem 0.9375rem;
     }
   }
+}
+
+.s-hero-bg {
+  position: absolute;
+  inset: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #060f26 0px,
+    #07122c 60px,
+    #091733 110px,
+    #0b1c3c 160px,
+    #0d2045 200px,
+    #0f2450 225px,
+    #102653 238px,
+    #0f2450 251px,
+    #0d2045 268px,
+    #0b1c3c 295px,
+    #091733 335px,
+    #07122c 390px,
+    #060f26 450px,
+    #07122c 520px,
+    #091733 575px,
+    #0b1c3c 620px,
+    #0d2248 660px,
+    #0e2450 678px,
+    #0d2248 696px,
+    #0b1c3c 716px,
+    #091733 748px,
+    #07122c 800px,
+    #060f26 860px
+  );
+  animation: hero-drift 50s linear infinite;
+  z-index: 0;
+}
+
+@keyframes hero-drift {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(33.33%, 33.33%); }
 }
