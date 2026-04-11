@@ -11,8 +11,7 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  max-width: 75rem;
+  gap: 1.6rem;
   margin: 0 auto;
 }
 
@@ -38,7 +37,6 @@
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow);
   border-color: rgba(240,120,32,.2);
 }
@@ -56,6 +54,13 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.125rem;
+
+  & i {
+    color: white;
+    font-size: 22px;
+    line-height: 0;
+    display: block;
+  }
 }
 
 .product-icon.orange { 
