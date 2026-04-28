@@ -1,6 +1,14 @@
 header {
-  background-color: var(--navy-dk);
   padding-block: 1.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease, border-color .3s ease;
   
   & nav {
     display: flex;
@@ -8,7 +16,7 @@ header {
     gap: 2rem;
 
     & a:not(.btn, :first-child) {
-      color: var(--muted);
+      color: rgb(202, 202, 202);
       transition: color .5s ease;
       position: relative;
 
@@ -41,4 +49,12 @@ header {
   & a:first-child {
     margin-right: auto;
   }
+}
+
+header.scrolled {
+  background: rgba(6, 18, 48, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
 }

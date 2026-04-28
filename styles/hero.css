@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
 
-  padding-block: 7.5rem;
+  padding-block: 12rem 7.5rem;
 
   .container {
     position: relative;
@@ -134,4 +134,26 @@
 @keyframes hero-drift {
   from { transform: translate(0, 0); }
   to   { transform: translate(33.33%, 33.33%); }
+}
+
+@media (width <= 40rem) {
+  .s-hero {
+    padding-block: 5rem;
+  }
+
+  .s-hero .hero-inner .left-hero .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .s-hero .hero-inner .left-hero .hero-action {
+    flex-direction: column;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+  }
 }

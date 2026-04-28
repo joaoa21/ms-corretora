@@ -1,6 +1,6 @@
 #products {
   background-color: var(--gray);
-  padding-block: 5rem;
+  padding-block: 5rem 3.6rem;
 
   & .products-header {
     text-align: center;
@@ -92,3 +92,8 @@
   margin-top: 3rem;
 }
 
+@media (width <= 40rem) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
