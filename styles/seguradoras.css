@@ -39,7 +39,7 @@
   align-items: center;
   gap: 4.5rem;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 50s linear infinite;
 }
 
 .track img {

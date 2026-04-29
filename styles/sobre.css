@@ -1,0 +1,112 @@
+#sobre {
+  background: var(--white);
+  padding-block: 5rem;
+}
+
+.sobre-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.sobre-visual {
+  position: relative;
+}
+
+.sobre-card {
+  background: var(--navy);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  color: var(--white);
+}
+
+.sobre-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  color: var(--white);
+}
+
+.sobre-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.375rem;
+}
+
+.sobre-item:last-child { margin-bottom:0; }
+
+.sobre-dot {
+  width: 2rem; height: 2rem;
+  min-width: 2rem;
+  background: rgba(240,120,32,.2);
+  border: 1.5px solid var(--orange);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  color: #f47a20;
+}
+
+.sobre-item-text strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.1875rem;
+}
+
+.sobre-item-text span {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,.6);
+}
+
+.sobre-float {
+  position: absolute;
+  bottom: -1.25rem;
+  right: -1.25rem;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 0.875rem;
+  padding: 2.5rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 0.75rem 2.5rem rgba(240,120,32,.4);
+}
+
+.sobre-float strong { font-family:'Bricolage Grotesque',sans-serif; font-size: 2rem; font-weight: 800; display: block; }
+.sobre-float span { font-size:.78rem; font-weight:500; opacity:.9; }
+
+.sobre-text .section-sub { margin-bottom: 1.75rem; }
+
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.checklist li::before {
+  content: '✓';
+  width: 1.5rem; height: 1.5rem;
+  min-width:1.5rem;
+  background: rgba(240,120,32,.1);
+  color: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 700;
+}
