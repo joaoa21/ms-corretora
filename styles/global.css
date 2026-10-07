@@ -104,7 +104,7 @@ img {
     visibility: hidden;
   }
 
-  .js .s-hero h1 {
+  .js [data-hero-titulo] {
     transform: translateY(1.5rem);
   }
 }

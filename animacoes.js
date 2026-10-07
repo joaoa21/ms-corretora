@@ -31,6 +31,8 @@
 
   // parallax só no desktop: no celular as fotos do hero nem aparecem
   mm.add("(prefers-reduced-motion: no-preference) and (min-width: 62.5rem)", () => {
+    if (!document.querySelector(".right-hero")) return; // só a página inicial tem as fotos
+
     const rolagemDoHero = { trigger: ".s-hero", start: "top top", end: "bottom top", scrub: true };
 
     gsap.to(".right-hero", { yPercent: -12, ease: "none", scrollTrigger: rolagemDoHero });
@@ -67,13 +69,19 @@
   function animarEntrada() {
     const tl = gsap.timeline({ defaults: { duration: 0.9, ease: "power3.out" } });
 
-    // o h1 já está visível (é o LCP); ele só desliza até o lugar
-    tl.to(".s-hero h1", { y: 0, duration: 1.2, ease: "expo.out" }, 0)
+    // só anima o que existe na página (a home e a de produtos têm topos diferentes)
+    const existe = (sel) => document.querySelector(sel) !== null;
+
+    // o título já está visível (é o LCP); ele só desliza até o lugar
+    tl.to("[data-hero-titulo]", { y: 0, duration: 1.2, ease: "expo.out" }, 0)
       .fromTo("header [data-hero]", { autoAlpha: 0, y: -20 }, { autoAlpha: 1, y: 0 }, 0)
-      .fromTo(".left-hero [data-hero]", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, stagger: 0.1 }, 0.25)
-      .fromTo(".right-hero [data-hero]",
+      .fromTo("main [data-hero]:not(.photo-card)", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, stagger: 0.1 }, 0.25);
+
+    if (existe(".photo-card")) {
+      tl.fromTo(".photo-card",
         { autoAlpha: 0, y: 50, scale: 0.94 },
         { autoAlpha: 1, y: 0, scale: 1, duration: 1.1, stagger: 0.12 }, 0.2);
+    }
 
     // contadores: "+15" sobe de 0 a 15, "+2k" de 0 a 2
     document.querySelectorAll(".hero-stats strong").forEach((el) => {

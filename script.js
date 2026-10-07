@@ -19,7 +19,7 @@ const observador = new IntersectionObserver((entradas) => {
   entradas.forEach((e) => e.target.classList.toggle("pausado", !e.isIntersecting));
 });
 
-document.querySelectorAll(".s-hero, .marquee").forEach((el) => observador.observe(el));
+document.querySelectorAll(".s-hero, .page-hero, .marquee").forEach((el) => observador.observe(el));
 
 // ── Header ──
 const header = document.querySelector("header");
@@ -49,58 +49,69 @@ document.addEventListener("keydown", (e) => {
 
 // ── Formulário de cotação ──
 const form = document.querySelector("#form-cotacao");
-const campoSeguro = form.querySelector("#f-seguro");
-const campoTelefone = form.querySelector("#f-telefone");
 
-// clicar num card de produto já deixa o tipo de seguro selecionado
-document.querySelectorAll(".product-card[data-seguro]").forEach((card) => {
-  card.addEventListener("click", () => {
-    campoSeguro.value = card.dataset.seguro;
+// só existe na página inicial
+if (form) {
+  const campoSeguro = form.querySelector("#f-seguro");
+  const campoTelefone = form.querySelector("#f-telefone");
+
+  // clicar num card de produto já deixa o tipo de seguro selecionado
+  document.querySelectorAll(".product-card[data-seguro]").forEach((card) => {
+    card.addEventListener("click", () => {
+      campoSeguro.value = card.dataset.seguro;
+    });
   });
-});
 
-// máscara (00) 00000-0000
-campoTelefone.addEventListener("input", () => {
-  const d = campoTelefone.value.replace(/\D/g, "").slice(0, 11);
-  let v = d;
-  if (d.length > 2) v = `(${d.slice(0, 2)}) ${d.slice(2)}`;
-  if (d.length > 7) v = `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}`;
-  campoTelefone.value = v;
-});
+  // máscara (00) 00000-0000
+  campoTelefone.addEventListener("input", () => {
+    const d = campoTelefone.value.replace(/\D/g, "").slice(0, 11);
+    let v = d;
+    if (d.length > 2) v = `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length > 7) v = `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}`;
+    campoTelefone.value = v;
+  });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  let primeiroInvalido = null;
+    let primeiroInvalido = null;
+    form.querySelectorAll("[required]").forEach((campo) => {
+      const valido = campo.checkValidity();
+      campo.setAttribute("aria-invalid", !valido);
+      if (!valido && !primeiroInvalido) primeiroInvalido = campo;
+    });
+
+    if (primeiroInvalido) {
+      primeiroInvalido.focus();
+      return;
+    }
+
+    const dados = new FormData(form);
+    const linhas = [
+      "Olá! Gostaria de uma cotação.",
+      "",
+      `*Nome:* ${dados.get("nome").trim()}`,
+      `*Telefone:* ${dados.get("telefone")}`,
+      `*Seguro:* ${dados.get("seguro")}`
+    ];
+
+    const mensagem = dados.get("mensagem").trim();
+    if (mensagem) linhas.push(`*Mensagem:* ${mensagem}`);
+
+    window.open(linkWhatsApp(linhas.join("\n")), "_blank", "noopener");
+  });
+
   form.querySelectorAll("[required]").forEach((campo) => {
-    const valido = campo.checkValidity();
-    campo.setAttribute("aria-invalid", !valido);
-    if (!valido && !primeiroInvalido) primeiroInvalido = campo;
+    campo.addEventListener("input", () => campo.removeAttribute("aria-invalid"));
+    campo.addEventListener("change", () => campo.removeAttribute("aria-invalid"));
   });
 
-  if (primeiroInvalido) {
-    primeiroInvalido.focus();
-    return;
+  // vindo da página de produtos (index.html?seguro=Seguro%20Auto#cotacao),
+  // o tipo de seguro já chega selecionado
+  const seguroDaUrl = new URLSearchParams(location.search).get("seguro");
+  if (seguroDaUrl && [...campoSeguro.options].some((o) => o.value === seguroDaUrl)) {
+    campoSeguro.value = seguroDaUrl;
   }
-
-  const dados = new FormData(form);
-  const linhas = [
-    "Olá! Gostaria de uma cotação.",
-    "",
-    `*Nome:* ${dados.get("nome").trim()}`,
-    `*Telefone:* ${dados.get("telefone")}`,
-    `*Seguro:* ${dados.get("seguro")}`
-  ];
-
-  const mensagem = dados.get("mensagem").trim();
-  if (mensagem) linhas.push(`*Mensagem:* ${mensagem}`);
-
-  window.open(linkWhatsApp(linhas.join("\n")), "_blank", "noopener");
-});
-
-form.querySelectorAll("[required]").forEach((campo) => {
-  campo.addEventListener("input", () => campo.removeAttribute("aria-invalid"));
-  campo.addEventListener("change", () => campo.removeAttribute("aria-invalid"));
-});
+}
 
 document.querySelector("#ano").textContent = new Date().getFullYear();

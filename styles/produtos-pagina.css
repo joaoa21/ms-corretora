@@ -1,0 +1,272 @@
+/* ── Topo da página de produtos (usa o mesmo fundo animado do hero) ── */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 10rem 5rem;
+  color: var(--white);
+
+  & .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  & h1 {
+    font-size: 3.6rem;
+    font-weight: 800;
+    max-width: 44rem;
+    margin-bottom: 1.25rem;
+
+    & span {
+      color: var(--orange);
+    }
+  }
+
+  & p {
+    color: rgba(255,255,255,.72);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 38rem;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  gap: .6rem;
+  font-size: .9rem;
+  color: rgba(255,255,255,.55);
+  margin-bottom: 1.5rem;
+
+  & a:hover {
+    color: var(--orange);
+  }
+
+  & [aria-current] {
+    color: var(--white);
+  }
+}
+
+/* atalhos para cada seguro: úteis quando a lista crescer */
+.atalhos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 2.25rem;
+
+  & a {
+    padding: .5rem 1.1rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.85);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.22);
+    transition: color .3s ease, box-shadow .3s ease, background-color .3s ease;
+
+    &:hover {
+      color: var(--orange);
+      box-shadow: inset 0 0 0 1px var(--orange);
+      background-color: rgba(240,120,32,.08);
+    }
+  }
+}
+
+/* ── Lista de seguros ── */
+.lista-produtos {
+  background: var(--gray);
+  padding-block: 5rem;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.produto {
+  background: var(--white);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid transparent;
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
+  transition: box-shadow .3s ease, border-color .3s ease;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+
+  /* destaca o seguro quando se chega por um atalho ou link do rodapé */
+  &:target {
+    border-color: var(--orange);
+    box-shadow: var(--shadow);
+  }
+
+  & h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  & h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: .9rem;
+  }
+
+  & .btn {
+    justify-content: center;
+  }
+}
+
+.produto-topo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+
+  & .product-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+.produto-desc {
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.produto-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  margin-bottom: 1.5rem;
+
+  & li {
+    display: flex;
+    align-items: flex-start;
+    gap: .65rem;
+    line-height: 1.45;
+
+    &::before {
+      content: '✓';
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 1.35rem;
+      height: 1.35rem;
+      margin-top: .05rem;
+      border-radius: 50%;
+      background: rgba(240,120,32,.12);
+      color: var(--orange-txt);
+      font-size: .7rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.produto-ideal {
+  background: var(--gray);
+  border-radius: .75rem;
+  padding: .9rem 1rem;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: var(--text);
+  /* empurra "Ideal para" e o botão para o fim do card: ficam alinhados entre os cards */
+  margin-top: auto;
+  margin-bottom: 1.75rem;
+
+  & strong {
+    color: var(--navy);
+  }
+}
+
+/* ── Chamada no fim da lista ── */
+.produtos-cta {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  color: var(--white);
+  background:
+    radial-gradient(40rem 20rem at 100% 0%, rgba(240,120,32,.18), transparent 60%),
+    var(--navy);
+
+  & h2 {
+    font-size: 2rem;
+    margin-bottom: .6rem;
+  }
+
+  & p {
+    color: rgba(255,255,255,.72);
+    max-width: 34rem;
+    line-height: 1.6;
+  }
+}
+
+.produtos-cta-acoes {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+@media (width < 75rem) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 62.5rem) {
+  .produtos-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (width <= 40rem) {
+  .page-hero {
+    padding-block: 8rem 3.5rem;
+
+    & h1 {
+      font-size: 2.4rem;
+    }
+  }
+
+  .lista-produtos {
+    padding-block: 3.5rem;
+  }
+
+  .produtos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .produto {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .produtos-cta {
+    padding: 2rem 1.5rem;
+
+    & h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .produtos-cta-acoes {
+    flex-direction: column;
+    width: 100%;
+
+    & .btn {
+      justify-content: center;
+    }
+  }
+}
