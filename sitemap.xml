@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: trocar pelo domínio real -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.mscorretora.com.br/</loc>
+    <loc>https://mscorretoraseguros.com.br/</loc>
     <lastmod>2026-10-07</lastmod>
   </url>
   <url>
-    <loc>https://www.mscorretora.com.br/produtos.html</loc>
+    <loc>https://mscorretoraseguros.com.br/produtos.html</loc>
     <lastmod>2026-10-07</lastmod>
   </url>
 </urlset>

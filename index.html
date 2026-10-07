@@ -1,57 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS Corretora de Seguros | Vida, Auto, Residencial e Empresarial</title>
-  <meta name="description" content="MS Corretora de Seguros: seguro de vida, auto, residencial, moto, viagem e empresarial com o melhor custo-benefício. Cotação rápida pelo WhatsApp e mais de 15 anos de experiência.">
+  <title>MS Corretora de Seguros | Seguro Auto, Vida e Residencial</title>
+  <meta name="description" content="Corretora com +15 anos de experiência em seguro de vida, auto, residencial, moto, viagem e empresarial. Compare seguradoras e cote pelo WhatsApp.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0C1F4A">
 
-  <!-- TODO: trocar "https://www.mscorretora.com.br/" pelo domínio real (aqui e no JSON-LD abaixo) -->
-  <link rel="canonical" href="https://www.mscorretora.com.br/">
+  <link rel="canonical" href="https://mscorretoraseguros.com.br/">
 
+  <!-- ícones: aba do navegador, resultados do Google, atalho no celular -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- prévia ao compartilhar o link (WhatsApp, Facebook, LinkedIn, Instagram) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://www.mscorretora.com.br/">
   <meta property="og:site_name" content="MS Corretora de Seguros">
+  <meta property="og:url" content="https://mscorretoraseguros.com.br/">
   <meta property="og:title" content="MS Corretora de Seguros">
-  <meta property="og:description" content="Proteja o que mais importa para você. Cotação rápida e atendimento personalizado.">
-  <meta property="og:image" content="https://www.mscorretora.com.br/assets/pessoa-2.webp">
+  <meta property="og:description" content="Proteja o que mais importa: seguro de vida, auto, residencial e mais. Cotação rápida pelo WhatsApp.">
+  <meta property="og:image" content="https://mscorretoraseguros.com.br/assets/og-home.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MS Corretora de Seguros: proteja o que mais importa para você">
 
-  <!-- dados da empresa para o Google. TODO: preencher com os dados reais -->
+  <!-- prévia no X (Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MS Corretora de Seguros">
+  <meta name="twitter:description" content="Proteja o que mais importa: seguro de vida, auto, residencial e mais. Cotação rápida pelo WhatsApp.">
+  <meta name="twitter:image" content="https://mscorretoraseguros.com.br/assets/og-home.jpg">
+  <meta name="twitter:image:alt" content="MS Corretora de Seguros: proteja o que mais importa para você">
+
+  <!-- dados estruturados para o Google: empresa, site e perguntas frequentes.
+       TODO: telefone, e-mail, endereço e Instagram reais em "InsuranceAgency" -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "InsuranceAgency",
-    "name": "MS Corretora de Seguros",
-    "url": "https://www.mscorretora.com.br/",
-    "logo": "https://www.mscorretora.com.br/assets/logo-1.svg",
-    "image": "https://www.mscorretora.com.br/assets/pessoa-2.webp",
-    "description": "Corretora de seguros de vida, auto, residencial, moto, viagem, eletrônicos, transporte de cargas e empresarial.",
-    "telephone": "+55-00-00000-0000",
-    "email": "contato@mscorretora.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Exemplo, 000",
-      "addressLocality": "Cidade",
-      "addressRegion": "UF",
-      "postalCode": "00000-000",
-      "addressCountry": "BR"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
-    },
-    "sameAs": [
-      "https://instagram.com/"
+    "@graph": [
+      {
+        "@type": "InsuranceAgency",
+        "@id": "https://mscorretoraseguros.com.br/#empresa",
+        "name": "MS Corretora de Seguros",
+        "url": "https://mscorretoraseguros.com.br/",
+        "logo": "https://mscorretoraseguros.com.br/icons/icon-512.png",
+        "image": "https://mscorretoraseguros.com.br/assets/og-home.jpg",
+        "description": "Corretora de seguros com mais de 15 anos de experiência em seguro de vida, auto, residencial, moto, viagem, eletrônicos, transporte de cargas e empresarial.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "telephone": "+55-00-00000-0000",
+        "email": "contato@mscorretora.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Exemplo, 000",
+          "addressLocality": "Cidade",
+          "addressRegion": "UF",
+          "postalCode": "00000-000",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://instagram.com/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mscorretoraseguros.com.br/#site",
+        "url": "https://mscorretoraseguros.com.br/",
+        "name": "MS Corretora de Seguros",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://mscorretoraseguros.com.br/#empresa"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mscorretoraseguros.com.br/#duvidas",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como funciona a contratação de um seguro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O processo é simples e 100% digital. Você solicita uma cotação, nosso consultor entra em contato para entender suas necessidades, apresentamos as melhores opções do mercado e você assina tudo online. Em poucos dias sua apólice já está ativa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual a diferença entre uma corretora e uma seguradora?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A seguradora é quem emite e administra o seguro. A corretora, como a MS, é o intermediário especializado que trabalha para o cliente: comparamos opções de diversas seguradoras, negociamos melhores condições e acompanhamos você em caso de sinistro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Contratar pela corretora sai mais caro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. A comissão da corretora já está incluída no preço do seguro, que é o mesmo contratando direto ou com a gente. A diferença é que você ganha um consultor para comparar opções e cuidar de você durante toda a vigência da apólice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como acionar o seguro em caso de sinistro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Entre em contato conosco pelo WhatsApp ou telefone. Nossa equipe orienta você em cada etapa do acionamento junto à seguradora, cuidando da burocracia para que você seja atendido o mais rápido possível."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O preço do seguro varia com o perfil do cliente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Fatores como idade, histórico de sinistros, localização e tipo de bem influenciam no valor. Por isso buscamos a melhor combinação de cobertura e preço para o seu perfil, comparando várias seguradoras."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso contratar mais de um tipo de seguro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Com certeza! Muitos clientes combinam seguros, como vida, auto e residencial. Em alguns casos é possível até obter descontos por ter múltiplas apólices. Fale com a gente para montar o pacote ideal."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
-
-  <link rel="icon" href="assets/logo-1.svg" type="image/svg+xml">
 
   <!-- fontes hospedadas no próprio site (sem bloquear a renderização no Google Fonts) -->
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
@@ -173,76 +269,76 @@
         </div>
 
         <div class="product-grid" data-reveal-group>
-          <a href="#cotacao" class="product-card" data-seguro="Seguro de Vida">
+          <a href="produtos.html#seguro-de-vida" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
             </div>
             <h3>Seguro de Vida</h3>
             <p>Proteção financeira para sua família em caso de imprevistos. Cobertura completa com as melhores condições.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Residencial">
+          <a href="produtos.html#residencial" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
             </div>
             <h3>Residencial</h3>
             <p>Segurança para o seu lar contra incêndio, roubo, enchentes e outros sinistros com cobertura ampla.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Seguro Auto">
+          <a href="produtos.html#seguro-auto" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
             </div>
             <h3>Seguro Auto</h3>
             <p>Seu veículo protegido contra roubo, colisão e terceiros. Assistência 24h em todo o território nacional.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Eletrônicos">
+          <a href="produtos.html#eletronicos" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
             </div>
             <h3>Eletrônicos</h3>
             <p>Celular, notebook, TV e outros equipamentos também merecem proteção contra danos e furtos.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Seguro Viagem">
+          <a href="produtos.html#seguro-viagem" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
             </div>
             <h3>Seguro Viagem</h3>
             <p>Viaje tranquilo com cobertura médica, cancelamento de voo, perda de bagagem e assistência global.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Transporte de Cargas">
+          <a href="produtos.html#transporte-de-cargas" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
             </div>
             <h3>Transporte de Cargas</h3>
             <p>Cobertura completa para suas mercadorias durante o transporte terrestre, aéreo ou marítimo.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Seguro Moto">
+          <a href="produtos.html#seguro-moto" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
             </div>
             <h3>Seguro Moto</h3>
             <p>Proteção específica para motocicletas, com cobertura de roubo, colisão e assistência 24 horas.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="#cotacao" class="product-card" data-seguro="Empresarial">
+          <a href="produtos.html#empresarial" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
             </div>
             <h3>Empresarial</h3>
             <p>Proteja seu negócio com cobertura para patrimônio, responsabilidade civil e muito mais.</p>
-            <span class="product-link">Cotar agora</span>
+            <span class="product-link">Saiba mais</span>
           </a>
         </div>
 
@@ -302,28 +398,28 @@
             <div class="sobre-card" data-reveal="left">
               <h3>Nossa dedicação:<br>Sua Cobertura</h3>
               <div class="sobre-item">
-                <div class="sobre-dot">✓</div>
+                <div class="sobre-dot" aria-hidden="true"></div>
                 <div class="sobre-item-text">
                   <strong>+15 anos de experiência</strong>
                   <span>Corretora consolidada com histórico sólido no mercado</span>
                 </div>
               </div>
               <div class="sobre-item">
-                <div class="sobre-dot">✓</div>
+                <div class="sobre-dot" aria-hidden="true"></div>
                 <div class="sobre-item-text">
                   <strong>Melhor custo-benefício</strong>
                   <span>Comparamos as melhores seguradoras para você economizar</span>
                 </div>
               </div>
               <div class="sobre-item">
-                <div class="sobre-dot">✓</div>
+                <div class="sobre-dot" aria-hidden="true"></div>
                 <div class="sobre-item-text">
                   <strong>Processo 100% digital</strong>
                   <span>Cotação, contratação e gestão pelo celular ou computador</span>
                 </div>
               </div>
               <div class="sobre-item">
-                <div class="sobre-dot">✓</div>
+                <div class="sobre-dot" aria-hidden="true"></div>
                 <div class="sobre-item-text">
                   <strong>Atendimento personalizado</strong>
                   <span>Consultor dedicado para encontrar a melhor solução</span>

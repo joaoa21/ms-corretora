@@ -38,16 +38,13 @@
 .sobre-item:last-child { margin-bottom:0; }
 
 .sobre-dot {
-  width: 2rem; height: 2rem;
-  min-width: 2rem;
-  background: rgba(240,120,32,.2);
-  border: 1.5px solid var(--orange);
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .85rem;
-  color: #f47a20;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  margin-top: .1rem;
+  border-radius: 50%;
+  background: var(--check-branco) center / 55% no-repeat, var(--orange);
+  box-shadow: 0 0 0 4px rgba(240,120,32,.15);
 }
 
 .sobre-item-text strong {
@@ -72,7 +69,8 @@
   border-radius: 0.875rem;
   padding: 1.5rem 2rem;
   text-align: center;
-  box-shadow: 0 0.75rem 2.5rem rgba(192,85,8,.4);
+  /* sombra neutra (sem brilho laranja), só para descolar do card azul */
+  box-shadow: 0 0.75rem 2rem rgba(12,31,74,.18);
 }
 
 .sobre-float strong { font-family:'Bricolage Grotesque',sans-serif; font-size: 2rem; font-weight: 800; display: block; }
@@ -101,17 +99,11 @@
 }
 
 .checklist li::before {
-  content: '✓';
+  content: '';
   width: 1.5rem; height: 1.5rem;
   min-width:1.5rem;
-  background: rgba(240,120,32,.1);
-  color: var(--orange);
+  background: var(--check-laranja) center / 55% no-repeat, rgba(240,120,32,.14);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .75rem;
-  font-weight: 700;
 }
 
 @media (width < 62.5rem) {

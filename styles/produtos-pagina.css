@@ -154,35 +154,64 @@
     line-height: 1.45;
 
     &::before {
-      content: '✓';
+      content: '';
       flex-shrink: 0;
-      display: grid;
-      place-items: center;
       width: 1.35rem;
       height: 1.35rem;
       margin-top: .05rem;
       border-radius: 50%;
-      background: rgba(240,120,32,.12);
-      color: var(--orange-txt);
-      font-size: .7rem;
-      font-weight: 700;
+      background: var(--check-laranja) center / 55% no-repeat, rgba(240,120,32,.14);
     }
   }
 }
 
 .produto-ideal {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
   background: var(--gray);
-  border-radius: .75rem;
-  padding: .9rem 1rem;
-  font-size: .92rem;
-  line-height: 1.5;
-  color: var(--text);
+  border-radius: .875rem;
+  padding: 1rem 1.15rem;
   /* empurra "Ideal para" e o botão para o fim do card: ficam alinhados entre os cards */
   margin-top: auto;
   margin-bottom: 1.75rem;
 
+  /* rótulo no mesmo estilo de "Principais coberturas" */
   & strong {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+    color: var(--orange-txt);
+    margin-bottom: .3rem;
+  }
+
+  & p {
+    font-size: .95rem;
+    line-height: 1.5;
     color: var(--navy);
+    font-weight: 500;
+  }
+}
+
+.produto-ideal-icone {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: .625rem;
+  background: var(--white);
+
+  & svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: var(--orange-txt);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 }
 

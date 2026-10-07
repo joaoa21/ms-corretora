@@ -1,0 +1,76 @@
+# Configuração para hospedagens com Apache (Hostinger, HostGator, Locaweb, cPanel...).
+# Em Netlify, Vercel, Cloudflare Pages ou GitHub Pages este arquivo é ignorado
+# (nelas o 404.html já é usado automaticamente).
+
+# ── Páginas de erro ──
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 503 /503.html
+
+# não lista o conteúdo das pastas (ex.: /img/ mostra a página 403)
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ── Modo manutenção ──
+  # Para ativar, tire o "#" das 3 linhas abaixo. Todo o site mostra a página 503,
+  # menos os arquivos que ela mesma precisa para aparecer.
+  # RewriteCond %{REQUEST_URI} !^/(503\.html|styles/|fonts/|assets/|icons/|favicon\.ico|script\.js)
+  # RewriteCond %{REQUEST_URI} !\.(css|js|woff2|svg|png|jpg|webp)$
+  # RewriteRule ^ - [R=503,L]
+
+  # ── Endereço único: sempre https e sem "www" (evita conteúdo duplicado no Google) ──
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://mscorretoraseguros.com.br%{REQUEST_URI} [L,R=301]
+
+  # /index.html vira só / (o endereço oficial da home)
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?]
+  RewriteRule ^index\.html$ / [L,R=301]
+</IfModule>
+
+# ── Compressão (arquivos de texto ficam até 70% menores) ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml application/manifest+json image/svg+xml
+</IfModule>
+
+# ── Cache no navegador de quem visita ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 day"
+
+  # páginas: sempre conferem se há versão nova
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # CSS e JS do site: 1 dia (mudanças aparecem para todos no máximo no dia seguinte)
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+
+  # imagens, ícones e fontes: mudam raramente
+  # (se trocar uma imagem, troque também o nome do arquivo)
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # bibliotecas em /vendor têm versão fixa: podem ficar em cache por 1 ano
+  <If "%{REQUEST_URI} =~ m#^/vendor/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+
+  # segurança básica
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+</IfModule>

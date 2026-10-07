@@ -1,25 +1,217 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seguros | MS Corretora de Seguros</title>
-  <meta name="description" content="Conheça os seguros da MS Corretora: vida, auto, residencial, moto, viagem, eletrônicos, transporte de cargas e empresarial. Veja as coberturas e peça sua cotação.">
+  <title>Seguros de Vida, Auto, Residencial e mais | MS Corretora</title>
+  <meta name="description" content="Veja as coberturas dos seguros de vida, auto, residencial, moto, viagem, eletrônicos, cargas e empresarial e peça sua cotação com a MS Corretora.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0C1F4A">
 
-  <!-- TODO: trocar "https://www.mscorretora.com.br/" pelo domínio real -->
-  <link rel="canonical" href="https://www.mscorretora.com.br/produtos.html">
+  <link rel="canonical" href="https://mscorretoraseguros.com.br/produtos.html">
 
+  <!-- ícones: aba do navegador, resultados do Google, atalho no celular -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- prévia ao compartilhar o link (WhatsApp, Facebook, LinkedIn, Instagram) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://www.mscorretora.com.br/produtos.html">
   <meta property="og:site_name" content="MS Corretora de Seguros">
-  <meta property="og:title" content="Seguros | MS Corretora de Seguros">
+  <meta property="og:url" content="https://mscorretoraseguros.com.br/produtos.html">
+  <meta property="og:title" content="Seguros para cada momento | MS Corretora">
   <meta property="og:description" content="Vida, auto, residencial, moto, viagem e muito mais. Veja as coberturas e peça sua cotação.">
-  <meta property="og:image" content="https://www.mscorretora.com.br/assets/pessoa-2.webp">
+  <meta property="og:image" content="https://mscorretoraseguros.com.br/assets/og-produtos.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Seguros da MS Corretora: vida, residencial, auto, eletrônicos, viagem, cargas, moto e empresarial">
 
-  <link rel="icon" href="assets/logo-1.svg" type="image/svg+xml">
+  <!-- prévia no X (Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Seguros para cada momento | MS Corretora">
+  <meta name="twitter:description" content="Vida, auto, residencial, moto, viagem e muito mais. Veja as coberturas e peça sua cotação.">
+  <meta name="twitter:image" content="https://mscorretoraseguros.com.br/assets/og-produtos.jpg">
+  <meta name="twitter:image:alt" content="Seguros da MS Corretora: vida, residencial, auto, eletrônicos, viagem, cargas, moto e empresarial">
+
+  <!-- dados estruturados: caminho da página e lista de seguros (gerada a partir dos cards) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://mscorretoraseguros.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Produtos",
+            "item": "https://mscorretoraseguros.com.br/produtos.html"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Seguros da MS Corretora",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Service",
+              "name": "Seguro de Vida",
+              "description": "Garante a tranquilidade financeira da sua família em caso de imprevistos. O valor da indenização ajuda a manter o padrão de vida, quitar dívidas e custear os estudos dos filhos.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#seguro-de-vida",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Service",
+              "name": "Residencial",
+              "description": "Protege a estrutura do imóvel e tudo o que está dentro dele, além de oferecer serviços de assistência para resolver os pequenos problemas do dia a dia.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#residencial",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Service",
+              "name": "Seguro Auto",
+              "description": "Cobertura completa para o seu veículo e para terceiros, com assistência 24 horas em todo o Brasil para você nunca ficar na mão.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#seguro-auto",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Service",
+              "name": "Eletrônicos",
+              "description": "Seus equipamentos acompanham você o dia todo e estão expostos a quedas, roubos e acidentes. O seguro cobre o conserto ou a reposição do aparelho.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#eletronicos",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Service",
+              "name": "Seguro Viagem",
+              "description": "Assistência médica e suporte para imprevistos em viagens nacionais e internacionais. É obrigatório para entrar nos países europeus do Acordo de Schengen.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#seguro-viagem",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Service",
+              "name": "Transporte de Cargas",
+              "description": "Protege as mercadorias desde a coleta até a entrega, por via terrestre, aérea ou marítima. Inclui os seguros obrigatórios para transportadoras.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#transporte-de-cargas",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Service",
+              "name": "Seguro Moto",
+              "description": "Proteção pensada para motociclistas, com coberturas para a moto, para terceiros e assistência para seguir viagem com segurança.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#seguro-moto",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "Service",
+              "name": "Empresarial",
+              "description": "Protege o patrimônio e a continuidade do seu negócio. As coberturas são montadas de acordo com a atividade e o porte da empresa.",
+              "url": "https://mscorretoraseguros.com.br/produtos.html#empresarial",
+              "serviceType": "Seguro",
+              "provider": {
+                "@id": "https://mscorretoraseguros.com.br/#empresa"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -45,7 +237,7 @@
   <header>
     <div class="container" data-hero>
       <nav>
-        <a href="index.html" class="logo">
+        <a href="./" class="logo">
           <img src="assets/logo-1.svg" alt="MS Corretora de Seguros" width="300" height="92">
         </a>
 
@@ -54,12 +246,12 @@
         </button>
 
         <div class="menu" id="menu">
-          <a href="index.html">Início</a>
+          <a href="./">Início</a>
           <a href="produtos.html" aria-current="page">Produtos</a>
-          <a href="index.html#sobre">Sobre</a>
-          <a href="index.html#duvidas">Dúvidas</a>
+          <a href="./#sobre">Sobre</a>
+          <a href="./#duvidas">Dúvidas</a>
 
-          <a href="index.html#cotacao" class="btn btn-sm">Fale Conosco</a>
+          <a href="./#cotacao" class="btn btn-sm">Fale Conosco</a>
         </div>
       </nav>
     </div>
@@ -70,7 +262,7 @@
       <div class="s-hero-bg"></div>
       <div class="container">
         <nav class="breadcrumb" aria-label="Você está em" data-hero>
-          <a href="index.html">Início</a>
+          <a href="./">Início</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page">Produtos</span>
         </nav>
@@ -112,8 +304,14 @@
               <li>Diagnóstico de doenças graves</li>
               <li>Assistência funeral familiar</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> quem tem dependentes ou quer garantir o futuro da família.</p>
-            <a href="index.html?seguro=Seguro%20de%20Vida#cotacao" class="btn btn-claro">Cotar Seguro de Vida</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Quem tem dependentes ou quer garantir o futuro da família.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Seguro%20de%20Vida#cotacao" class="btn btn-claro">Cotar Seguro de Vida</a>
           </article>
 
           <article class="produto" id="residencial">
@@ -129,8 +327,14 @@
               <li>Danos elétricos e vendaval</li>
               <li>Assistência 24h: chaveiro, encanador e eletricista</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> casas e apartamentos, próprios ou alugados.</p>
-            <a href="index.html?seguro=Residencial#cotacao" class="btn btn-claro">Cotar Residencial</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Casas e apartamentos, próprios ou alugados.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Residencial#cotacao" class="btn btn-claro">Cotar Residencial</a>
           </article>
 
           <article class="produto" id="seguro-auto">
@@ -146,8 +350,14 @@
               <li>Guincho, pane seca e troca de pneu</li>
               <li>Carro reserva e cobertura de vidros</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> carros de uso pessoal, familiar ou de aplicativo.</p>
-            <a href="index.html?seguro=Seguro%20Auto#cotacao" class="btn btn-claro">Cotar Seguro Auto</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Carros de uso pessoal, familiar ou de aplicativo.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Seguro%20Auto#cotacao" class="btn btn-claro">Cotar Seguro Auto</a>
           </article>
 
           <article class="produto" id="eletronicos">
@@ -163,8 +373,14 @@
               <li>Danos causados por líquidos</li>
               <li>Danos elétricos</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> celulares, notebooks, tablets, câmeras e TVs.</p>
-            <a href="index.html?seguro=Eletr%C3%B4nicos#cotacao" class="btn btn-claro">Cotar Eletrônicos</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Celulares, notebooks, tablets, câmeras e TVs.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Eletr%C3%B4nicos#cotacao" class="btn btn-claro">Cotar Eletrônicos</a>
           </article>
 
           <article class="produto" id="seguro-viagem">
@@ -180,8 +396,14 @@
               <li>Cancelamento e interrupção da viagem</li>
               <li>Central de atendimento 24h em português</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> viagens de lazer, trabalho, estudo ou intercâmbio.</p>
-            <a href="index.html?seguro=Seguro%20Viagem#cotacao" class="btn btn-claro">Cotar Seguro Viagem</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Viagens de lazer, trabalho, estudo ou intercâmbio.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Seguro%20Viagem#cotacao" class="btn btn-claro">Cotar Seguro Viagem</a>
           </article>
 
           <article class="produto" id="transporte-de-cargas">
@@ -197,8 +419,14 @@
               <li>Avarias na carga e descarga</li>
               <li>Transporte nacional e internacional</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> transportadoras, embarcadores e caminhoneiros autônomos.</p>
-            <a href="index.html?seguro=Transporte%20de%20Cargas#cotacao" class="btn btn-claro">Cotar Transporte de Cargas</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Transportadoras, embarcadores e caminhoneiros autônomos.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Transporte%20de%20Cargas#cotacao" class="btn btn-claro">Cotar Transporte de Cargas</a>
           </article>
 
           <article class="produto" id="seguro-moto">
@@ -214,8 +442,14 @@
               <li>Danos materiais e corporais a terceiros</li>
               <li>Guincho e assistência 24h</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> motos de passeio, trabalho e delivery.</p>
-            <a href="index.html?seguro=Seguro%20Moto#cotacao" class="btn btn-claro">Cotar Seguro Moto</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Motos de passeio, trabalho e delivery.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Seguro%20Moto#cotacao" class="btn btn-claro">Cotar Seguro Moto</a>
           </article>
 
           <article class="produto" id="empresarial">
@@ -231,8 +465,14 @@
               <li>Responsabilidade civil</li>
               <li>Lucros cessantes por paralisação</li>
             </ul>
-            <p class="produto-ideal"><strong>Ideal para</strong> lojas, escritórios, indústrias e prestadores de serviço.</p>
-            <a href="index.html?seguro=Empresarial#cotacao" class="btn btn-claro">Cotar Empresarial</a>
+            <div class="produto-ideal">
+              <span class="produto-ideal-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div>
+                <strong>Ideal para</strong>
+                <p>Lojas, escritórios, indústrias e prestadores de serviço.</p>
+              </div>
+            </div>
+            <a href="./?seguro=Empresarial#cotacao" class="btn btn-claro">Cotar Empresarial</a>
           </article>
         </div>
 
@@ -242,8 +482,7 @@
             <p>Trabalhamos com muitas outras modalidades. Fale com um consultor e montamos a proteção ideal para você.</p>
           </div>
           <div class="produtos-cta-acoes">
-            <a data-wa href="index.html#cotacao" class="btn">Falar no WhatsApp</a>
-            <a href="index.html#cotacao" class="btn secondary">Solicitar cotação</a>
+            <a data-wa href="./#cotacao" class="btn">Falar no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -254,7 +493,7 @@
     <div class="container">
       <div class="footer-inner" data-reveal-group>
         <div class="footer-brand">
-          <a href="index.html" class="logo">
+          <a href="./" class="logo">
             <img src="assets/logo-1.svg" alt="MS Corretora de Seguros" width="300" height="92" loading="lazy">
           </a>
           <p>Há mais de 15 anos protegendo famílias e empresas com as melhores coberturas e o melhor atendimento do mercado.</p>
@@ -264,7 +503,7 @@
             <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
             </a>
-            <a data-wa href="index.html#cotacao" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a data-wa href="./#cotacao" target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg class="icone-solido" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
             </a>
           </div>
@@ -284,16 +523,16 @@
         <div class="footer-col">
           <h3>Institucional</h3>
           <ul>
-            <li><a href="index.html#sobre">Sobre a MS</a></li>
-            <li><a href="index.html#cotacao">Solicitar cotação</a></li>
-            <li><a href="index.html#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="./#sobre">Sobre a MS</a></li>
+            <li><a href="./#cotacao">Solicitar cotação</a></li>
+            <li><a href="./#duvidas">Dúvidas frequentes</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h3>Contato</h3>
           <ul>
-            <li><a data-wa href="index.html#cotacao">(00) 00000-0000</a></li>
+            <li><a data-wa href="./#cotacao">(00) 00000-0000</a></li>
             <li><a href="mailto:contato@mscorretora.com.br">contato@mscorretora.com.br</a></li>
             <li>Seg. a sex., 8h às 18h</li>
           </ul>
@@ -307,7 +546,7 @@
     </div>
   </footer>
 
-  <a data-wa href="index.html#cotacao" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+  <a data-wa href="./#cotacao" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
   </a>
 </body>

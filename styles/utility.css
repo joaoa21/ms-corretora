@@ -101,6 +101,13 @@
   & em {
     color: var(--orange-lg);
   }
+
+  /* palavras separadas pelo animacoes.js: mantêm a cor e a caixa de onde estão
+     (sem isso a regra "& span" acima deixaria o título todo laranja e maiúsculo) */
+  & .palavra {
+    color: inherit;
+    text-transform: inherit;
+  }
 }
 
 @media (width <= 40rem) {

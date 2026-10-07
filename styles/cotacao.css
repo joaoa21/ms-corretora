@@ -16,7 +16,7 @@
 .cotacao-text {
   /* fundo escuro: aqui o laranja original já tem contraste */
   & .section-label,
-  & .section-title span {
+  & .section-title span:not(.palavra) {
     color: var(--orange);
   }
 

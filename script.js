@@ -29,23 +29,26 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 10);
 }, { passive: true });
 
-function setMenu(aberto) {
-  header.classList.toggle("menu-open", aberto);
-  menuToggle.setAttribute("aria-expanded", aberto);
-  menuToggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+// a página de manutenção não tem menu
+if (menuToggle) {
+  const setMenu = (aberto) => {
+    header.classList.toggle("menu-open", aberto);
+    menuToggle.setAttribute("aria-expanded", aberto);
+    menuToggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    setMenu(!header.classList.contains("menu-open"));
+  });
+
+  document.querySelectorAll(".menu a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setMenu(false);
+  });
 }
-
-menuToggle.addEventListener("click", () => {
-  setMenu(!header.classList.contains("menu-open"));
-});
-
-document.querySelectorAll(".menu a").forEach((link) => {
-  link.addEventListener("click", () => setMenu(false));
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") setMenu(false);
-});
 
 // ── Formulário de cotação ──
 const form = document.querySelector("#form-cotacao");
@@ -54,13 +57,6 @@ const form = document.querySelector("#form-cotacao");
 if (form) {
   const campoSeguro = form.querySelector("#f-seguro");
   const campoTelefone = form.querySelector("#f-telefone");
-
-  // clicar num card de produto já deixa o tipo de seguro selecionado
-  document.querySelectorAll(".product-card[data-seguro]").forEach((card) => {
-    card.addEventListener("click", () => {
-      campoSeguro.value = card.dataset.seguro;
-    });
-  });
 
   // máscara (00) 00000-0000
   campoTelefone.addEventListener("input", () => {
@@ -114,4 +110,5 @@ if (form) {
   }
 }
 
-document.querySelector("#ano").textContent = new Date().getFullYear();
+const ano = document.querySelector("#ano");
+if (ano) ano.textContent = new Date().getFullYear();

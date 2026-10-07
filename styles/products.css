@@ -31,7 +31,8 @@
   border: 1.5px solid transparent;
   position: relative;
   overflow: hidden;
-  transition: transform .3s, box-shadow .3s;
+  /* hover usa "translate" (e não transform): o transform fica livre para o parallax do GSAP */
+  transition: translate .3s, box-shadow .3s;
 }
 
 .product-card::before {
@@ -45,7 +46,8 @@
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  /* !important: o GSAP escreve "translate: none" no elemento ao animar o transform */
+  translate: 0 -4px !important;
   box-shadow: var(--shadow);
   border-color: rgba(240,120,32,.2);
 }
@@ -93,15 +95,23 @@
 }
 
 .product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
   margin-top: auto;
   padding-top: 1.25rem;
   font-weight: 600;
   font-size: .95rem;
   color: var(--orange-txt);
 
+  /* mesma seta dos botões, desenhada em SVG e pintada com a cor do texto */
   &::after {
-    content: " →";
-    display: inline-block;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    -webkit-mask: var(--seta) center / contain no-repeat;
+    mask: var(--seta) center / contain no-repeat;
     transition: transform .3s;
   }
 }
