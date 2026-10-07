@@ -9,13 +9,27 @@ header {
   background: transparent;
   border-bottom: 1px solid transparent;
   transition: background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease, border-color .3s ease;
-  
+
   & nav {
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
 
-    & a:not(.btn, :first-child) {
+  & .logo {
+    margin-right: auto;
+
+    & img {
+      width: 7rem;
+    }
+  }
+
+  & .menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    & a:not(.btn) {
       color: rgb(202, 202, 202);
       transition: color .5s ease;
       position: relative;
@@ -30,31 +44,109 @@ header {
         transition: transform .3s ease;
       }
 
+      &:hover {
+        color: white;
+      }
+
       &:hover::after {
         transform: scaleX(1);
       }
     }
-
-    & a:not(.btn):hover {
-      color: white;
-    }
-  }
-  
-  & a{
-    & img {
-      width: 7rem;
-    }
-  }
-
-  & a:first-child {
-    margin-right: auto;
   }
 }
 
-header.scrolled {
+header.scrolled,
+header.menu-open {
   background: rgba(6, 18, 48, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
   border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+/* botão hambúrguer: 3 linhas feitas com o span e seus pseudo-elementos */
+.menu-toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+
+  & span,
+  & span::before,
+  & span::after {
+    position: absolute;
+    left: 50%;
+    width: 1.5rem;
+    height: 2px;
+    margin-left: -0.75rem;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease;
+  }
+
+  & span { top: 50%; }
+
+  & span::before,
+  & span::after {
+    content: "";
+    left: 0;
+    margin-left: 0;
+  }
+
+  & span::before { transform: translateY(-7px); }
+  & span::after  { transform: translateY(7px); }
+
+  &[aria-expanded="true"] span { background: transparent; }
+  &[aria-expanded="true"] span::before { transform: rotate(45deg); background: var(--white); }
+  &[aria-expanded="true"] span::after  { transform: rotate(-45deg); background: var(--white); }
+}
+
+@media (width < 62.5rem) {
+  header.menu-open {
+    background: var(--navy-dk);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 2rem 2rem;
+    background: var(--navy-dk);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+
+    & a:not(.btn) {
+      padding-block: 1rem;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+      &::after { display: none; }
+    }
+
+    & .btn {
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+  }
+
+  header.menu-open .menu {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
 }

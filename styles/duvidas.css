@@ -1,0 +1,137 @@
+#duvidas {
+  background: var(--gray);
+  padding-block: 6rem;
+}
+
+.duvidas-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.duvidas-header {
+  position: sticky;
+  top: calc(var(--header-h) + 2rem);
+
+  & .section-title,
+  & .section-sub {
+    margin-inline: 0;
+  }
+
+  & .section-sub a {
+    color: var(--orange-txt);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1.5px solid transparent;
+  transition: border-color .3s ease, box-shadow .3s ease;
+
+  &[open] {
+    border-color: rgba(240,120,32,.3);
+    box-shadow: var(--shadow);
+  }
+
+  & summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.4rem 1.5rem;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+
+    &::-webkit-details-marker { display: none; }
+
+    /* ícone + que vira × quando aberto */
+    &::after {
+      content: "+";
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: rgba(240,120,32,.12);
+      color: var(--orange);
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1;
+      transition: transform .3s ease, background .3s ease, color .3s ease;
+    }
+  }
+
+  &[open] summary::after {
+    transform: rotate(45deg);
+    background: var(--orange);
+    color: var(--white);
+  }
+}
+
+.faq-a {
+  padding: 0 1.5rem 1.5rem;
+
+  & p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+}
+
+/* abertura animada nos navegadores que suportam */
+@supports (interpolate-size: allow-keywords) {
+  .faq-list {
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-item::details-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease, content-visibility .35s allow-discrete;
+  }
+
+  .faq-item[open]::details-content {
+    height: auto;
+  }
+}
+
+@media (width < 62.5rem) {
+  .duvidas-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .duvidas-header {
+    position: static;
+  }
+}
+
+@media (width <= 40rem) {
+  #duvidas {
+    padding-block: 4rem;
+  }
+
+  .faq-item summary {
+    font-size: 1.05rem;
+    padding: 1.2rem 1.25rem;
+  }
+
+  .faq-a {
+    padding: 0 1.25rem 1.25rem;
+  }
+}

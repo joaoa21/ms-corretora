@@ -1,0 +1,196 @@
+#cotacao {
+  background:
+    radial-gradient(60rem 30rem at 0% 0%, rgba(240,120,32,.12), transparent 60%),
+    var(--navy);
+  padding-block: 6rem;
+  color: var(--white);
+}
+
+.cotacao-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.cotacao-text {
+  /* fundo escuro: aqui o laranja original já tem contraste */
+  & .section-label,
+  & .section-title span {
+    color: var(--orange);
+  }
+
+  & .section-title {
+    color: var(--white);
+    margin-inline: 0;
+  }
+
+  & .section-sub {
+    color: rgba(255,255,255,.7);
+    margin-inline: 0;
+  }
+}
+
+.contato-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+
+  & li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & strong {
+    display: block;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.55);
+  }
+
+  & a,
+  & span:not(.contato-icon) {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  & a:hover {
+    color: var(--orange-lt);
+  }
+}
+
+.contato-icon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  background: rgba(240,120,32,.15);
+  border: 1.5px solid rgba(240,120,32,.5);
+
+  & svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: var(--orange);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    /* logo do WhatsApp é preenchido, não contorno */
+    &.icone-solido {
+      fill: var(--orange);
+      stroke: none;
+    }
+  }
+}
+
+.cotacao-form {
+  background: var(--white);
+  color: var(--text);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0,0,0,.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  & h3 {
+    font-size: 1.5rem;
+    color: var(--navy);
+  }
+
+  & .btn {
+    justify-content: center;
+    margin-top: .25rem;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+
+  & label {
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--navy);
+
+    & small {
+      font-weight: 400;
+      color: var(--muted);
+    }
+  }
+
+  & input,
+  & select,
+  & textarea {
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--gray);
+    border: 1.5px solid transparent;
+    border-radius: 0.625rem;
+    padding: .8rem 1rem;
+    width: 100%;
+    transition: border-color .2s ease, background .2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--orange);
+      background: var(--white);
+    }
+
+    &[aria-invalid="true"] {
+      border-color: #d93025;
+    }
+  }
+
+  & textarea {
+    resize: vertical;
+    min-height: 6rem;
+  }
+
+  & select:invalid {
+    color: var(--muted);
+  }
+}
+
+.form-nota {
+  font-size: .8rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (width < 62.5rem) {
+  .cotacao-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (width <= 40rem) {
+  #cotacao {
+    padding-block: 4rem;
+  }
+
+  .cotacao-form {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

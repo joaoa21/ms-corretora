@@ -42,6 +42,11 @@
   animation: marquee 50s linear infinite;
 }
 
+.marquee:hover .track,
+.marquee.pausado .track {
+  animation-play-state: paused;
+}
+
 .track img {
   height: 3rem;
   width: auto;

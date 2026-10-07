@@ -24,7 +24,7 @@
       & .hero-text {
         & h1 {
           font-size: 4.2rem;
-          font-weight: 900;
+          font-weight: 800;
           margin-bottom: 1.25rem;
 
           & span {
@@ -63,11 +63,11 @@
             font-family: 'Bricolage Grotesque', sans-serif;
             color: var(--orange);
             font-size: 1.75rem;
-            font-weight: 900;
+            font-weight: 800;
           }
 
           & span {
-            color: var(--muted);
+            color: rgba(255,255,255,.6);
             font-size: 0.875rem;
           }
         }
@@ -98,11 +98,18 @@
   }
 }
 
+/*
+  O degradê repete a cada 920px na diagonal de 135°. Andar 920px / √2 em x e em y
+  equivale a exatamente um ciclo, então o loop não tem emenda. O fundo é ancorado
+  em pixels (e não em % da altura do hero) para não se mover quando a fonte carrega.
+*/
 .s-hero-bg {
+  --passo: calc(920px / 1.41421356);
   position: absolute;
-  inset: -100%;
-  width: 300%;
-  height: 300%;
+  top: calc(var(--passo) * -1);
+  left: calc(var(--passo) * -1);
+  right: 0;
+  bottom: 0;
   background-image: repeating-linear-gradient(
     135deg,
     #060f26 0px,
@@ -127,18 +134,22 @@
     #07112a 860px,
     #060f26 920px
   );
-  animation: hero-drift 55s linear infinite;
+  animation: hero-drift 25s linear infinite;
   z-index: 0;
+}
+
+.s-hero.pausado .s-hero-bg {
+  animation-play-state: paused;
 }
 
 @keyframes hero-drift {
   from { transform: translate(0, 0); }
-  to   { transform: translate(33.33%, 33.33%); }
+  to   { transform: translate(var(--passo), var(--passo)); }
 }
 
 @media (width <= 40rem) {
   .s-hero {
-    padding-block: 5rem;
+    padding-block: 8rem 4rem;
   }
 
   .s-hero .hero-inner .left-hero .hero-text h1 {
@@ -149,11 +160,13 @@
     flex-direction: column;
   }
 
-  .btn {
+  .s-hero .btn {
     justify-content: center;
   }
 
-  .hero-stats {
+  .s-hero .hero-inner .left-hero .hero-stats {
     flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1.25rem;
   }
 }

@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url(../fonts/bricolage-grotesque.woff2) format('woff2');
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url(../fonts/dm-sans.woff2) format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -14,23 +30,32 @@
   --navy-dk:  #091733;
   --orange:   #F07820;
   --orange-lt:#FF8C35;
+  --orange-txt:#AD4B06; /* laranja para texto pequeno em fundo claro (contraste AA) */
+  --orange-lg: #D8620E; /* laranja para títulos grandes em fundo claro */
+  --orange-btn:#C05508; /* fundo dos botões: contraste AA com texto branco */
   --white:    #FFFFFF;
   --gray:     #eaeef5;
   --text:     #1A1A2E;
-  --muted:    #6B7280;
+  --muted:    #5d6573;
   --radius:   14px;
   --shadow:   0 8px 32px rgba(12,31,74,.12);
+  --header-h: 5.5rem;
 }
 
-html { 
-  scroll-behavior: smooth; 
+html {
+  scroll-padding-top: var(--header-h);
 }
+
+/* recomendado pelo Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
 
 body {
   font-family: 'DM Sans', sans-serif;
   color: var(--text);
   background: var(--white);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4 {
@@ -48,4 +73,38 @@ img {
     max-width: 100%;
     display: block;
     height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/*
+  Estado inicial das animações de entrada (animacoes.js revela tudo).
+  Só vale com JS ativo e para quem não pediu menos movimento.
+  O h1 é o maior elemento da primeira tela (LCP do Google), então ele
+  nunca fica invisível: só começa um pouco mais abaixo e desliza.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-hero],
+  .js [data-reveal],
+  .js [data-reveal-group] > * {
+    visibility: hidden;
+  }
+
+  .js .s-hero h1 {
+    transform: translateY(1.5rem);
+  }
 }

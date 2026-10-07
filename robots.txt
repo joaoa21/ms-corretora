@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: trocar pelo domínio real
+Sitemap: https://www.mscorretora.com.br/sitemap.xml

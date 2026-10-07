@@ -1,0 +1,148 @@
+footer {
+  background: var(--navy-dk);
+  color: rgba(255,255,255,.65);
+  padding-block: 4.5rem 2rem;
+  font-size: .95rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(3, 1fr);
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand {
+  & .logo img {
+    width: 7rem;
+  }
+
+  & p {
+    margin-block: 1.25rem 1.5rem;
+    max-width: 22rem;
+    line-height: 1.65;
+  }
+}
+
+.social {
+  display: flex;
+  gap: .75rem;
+
+  & a {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    background: rgba(255,255,255,.08);
+    transition: background .3s ease, transform .3s ease;
+
+    &:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+    }
+  }
+
+  & svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    /* logo do WhatsApp é preenchido, não contorno */
+    &.icone-solido {
+      fill: var(--white);
+      stroke: none;
+    }
+  }
+}
+
+.footer-col {
+  & h3 {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+
+  & a {
+    transition: color .3s ease;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: var(--orange-lt);
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  font-size: .85rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 900;
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 .5rem 1.5rem rgba(37,211,102,.45);
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  & svg {
+    width: 1.9rem;
+    height: 1.9rem;
+    fill: var(--white);
+  }
+}
+
+@media (width < 62.5rem) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (width <= 40rem) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .whatsapp-float {
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}

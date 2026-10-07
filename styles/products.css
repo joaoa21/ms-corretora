@@ -26,7 +26,8 @@
   background-color: var(--white);
   border-radius: var(--radius);
   padding: 1.75rem 1.5rem;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   border: 1.5px solid transparent;
   position: relative;
   overflow: hidden;
@@ -44,6 +45,7 @@
 }
 
 .product-card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: rgba(240,120,32,.2);
 }
@@ -62,11 +64,14 @@
   justify-content: center;
   margin-bottom: 1.125rem;
 
-  & i {
-    color: white;
-    font-size: 22px;
-    line-height: 0;
-    display: block;
+  & svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 }
 
@@ -85,6 +90,24 @@
   font-size: 1rem;
   color: var(--muted);
   line-height: 1.55;
+}
+
+.product-link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--orange-txt);
+
+  &::after {
+    content: " →";
+    display: inline-block;
+    transition: transform .3s;
+  }
+}
+
+.product-card:hover .product-link::after {
+  transform: translateX(4px);
 }
 
 .product-cta {
