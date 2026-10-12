@@ -6,6 +6,7 @@
   from = "/index.html"
   to = "/"
   status = 301
+  force = true
 
 # ── Modo manutenção ──
 # Para ativar, tire o "#" das linhas abaixo e publique. Todo o site passa a mostrar

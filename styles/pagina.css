@@ -83,8 +83,9 @@
 /* logos das seguradoras em branco, dentro do painel */
 .page-hero-parceiros {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;
   padding-top: .5rem;
 
   & small {
@@ -97,16 +98,18 @@
 
   & div {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
-    overflow: hidden;
+    gap: .6rem;
   }
 
+  /* cores originais sobre uma pastilha branca (inverter as cores quebrava o logo da Porto) */
   & img {
-    height: 1.5rem;
+    height: 2.1rem;
     width: auto;
-    filter: brightness(0) invert(1);
-    opacity: .75;
+    padding: .35rem .5rem;
+    border-radius: .5rem;
+    background: var(--white);
   }
 }
 
