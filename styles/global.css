@@ -44,6 +44,7 @@
   /* ícone de check em SVG (o caractere ✓ depende da fonte do sistema e fica fino e torto) */
   --check-branco: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
   --seta: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   --check-laranja: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23AD4B06' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
 }
 
@@ -78,6 +79,81 @@ img {
     max-width: 100%;
     display: block;
     height: auto;
+}
+
+/* "Pular para o conteúdo": invisível até receber foco pelo teclado */
+.pular-conteudo {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: .75rem 1.25rem;
+  border-radius: .625rem;
+  background: var(--orange-btn);
+  color: var(--white);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform .2s ease;
+
+  &:focus {
+    transform: none;
+  }
+}
+
+/* menu do celular aberto: a página de trás não rola */
+html.menu-aberto,
+html.menu-aberto body {
+  overflow: hidden;
+}
+
+/* "Pular para o conteúdo": invisível até receber foco pelo teclado */
+.pular-conteudo {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: .75rem 1.25rem;
+  border-radius: .625rem;
+  background: var(--orange-btn);
+  color: var(--white);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform .2s ease;
+
+  &:focus {
+    transform: none;
+  }
+}
+
+/* menu do celular aberto: a página de trás não rola */
+html.menu-aberto,
+html.menu-aberto body {
+  overflow: hidden;
+}
+
+/* "Pular para o conteúdo": invisível até receber foco pelo teclado */
+.pular-conteudo {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: .75rem 1.25rem;
+  border-radius: .625rem;
+  background: var(--orange-btn);
+  color: var(--white);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform .2s ease;
+
+  &:focus {
+    transform: none;
+  }
+}
+
+/* menu do celular aberto: a página de trás não rola */
+html.menu-aberto,
+html.menu-aberto body {
+  overflow: hidden;
 }
 
 :focus-visible {

@@ -4,10 +4,6 @@
   padding-inline: 2rem;
 }
 
-.mobile-hidden {
-  display: none;
-}
-
 .btn {
   display: inline-flex;
 
@@ -126,10 +122,4 @@
   max-width: 35rem;
   line-height: 1.65;
   margin: 0 auto;
-}
-
-@media (width >= 62.5rem) {
-  .mobile-hidden {
-    display: block;
-  }
 }

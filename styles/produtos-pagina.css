@@ -1,74 +1,3 @@
-/* ── Topo da página de produtos (usa o mesmo fundo animado do hero) ── */
-.page-hero {
-  position: relative;
-  overflow: hidden;
-  padding-block: 10rem 5rem;
-  color: var(--white);
-
-  & .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  & h1 {
-    font-size: 3.6rem;
-    font-weight: 800;
-    max-width: 44rem;
-    margin-bottom: 1.25rem;
-
-    & span {
-      color: var(--orange);
-    }
-  }
-
-  & p {
-    color: rgba(255,255,255,.72);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    max-width: 38rem;
-  }
-}
-
-.breadcrumb {
-  display: flex;
-  gap: .6rem;
-  font-size: .9rem;
-  color: rgba(255,255,255,.55);
-  margin-bottom: 1.5rem;
-
-  & a:hover {
-    color: var(--orange);
-  }
-
-  & [aria-current] {
-    color: var(--white);
-  }
-}
-
-/* atalhos para cada seguro: úteis quando a lista crescer */
-.atalhos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .6rem;
-  margin-top: 2.25rem;
-
-  & a {
-    padding: .5rem 1.1rem;
-    border-radius: 999px;
-    font-size: .9rem;
-    font-weight: 500;
-    color: rgba(255,255,255,.85);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.22);
-    transition: color .3s ease, box-shadow .3s ease, background-color .3s ease;
-
-    &:hover {
-      color: var(--orange);
-      box-shadow: inset 0 0 0 1px var(--orange);
-      background-color: rgba(240,120,32,.08);
-    }
-  }
-}
-
 /* ── Lista de seguros ── */
 .lista-produtos {
   background: var(--gray);
@@ -119,6 +48,44 @@
 
   & .btn {
     justify-content: center;
+  }
+
+  & h2 a:hover {
+    color: var(--orange-txt);
+  }
+}
+
+.produto-acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .9rem;
+
+  & .btn {
+    width: 100%;
+  }
+}
+
+.produto-detalhes {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--orange-txt);
+
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    -webkit-mask: var(--seta) center / contain no-repeat;
+    mask: var(--seta) center / contain no-repeat;
+    transition: transform .3s;
+  }
+
+  &:hover::after {
+    transform: translateX(4px);
   }
 }
 
@@ -261,13 +228,6 @@
 }
 
 @media (width <= 40rem) {
-  .page-hero {
-    padding-block: 8rem 3.5rem;
-
-    & h1 {
-      font-size: 2.4rem;
-    }
-  }
 
   .lista-produtos {
     padding-block: 3.5rem;

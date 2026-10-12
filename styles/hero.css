@@ -147,6 +147,30 @@
   to   { transform: translate(var(--passo), var(--passo)); }
 }
 
+@media (width < 62.5rem) {
+  .s-hero .hero-inner {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .s-hero .left-hero {
+    max-width: 34rem;
+  }
+
+  /* só a primeira foto, em formato de faixa */
+  .s-hero .foto-baixo {
+    display: none;
+  }
+
+  .s-hero .photo-card img.p1 {
+    width: 100%;
+    max-width: 34rem;
+    height: 15rem;
+    object-position: center 22%;
+    border-radius: 1rem 3rem 1rem 1rem;
+  }
+}
+
 @media (width <= 40rem) {
   .s-hero {
     padding-block: 8rem 4rem;

@@ -1,0 +1,93 @@
+#como-funciona {
+  background: var(--gray);
+  padding-block: 6rem;
+
+  & .products-header {
+    text-align: center;
+    margin: 0 auto 3.5rem;
+  }
+}
+
+.passos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  counter-reset: passo;
+}
+
+.passo {
+  position: relative;
+  background: var(--white);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem 2rem;
+  border: 1.5px solid transparent;
+  transition: box-shadow .3s ease, border-color .3s ease;
+
+  &:hover {
+    box-shadow: var(--shadow);
+    border-color: rgba(240,120,32,.2);
+  }
+
+  & h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 1.5rem 0 .75rem;
+  }
+
+  & p {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* linha que liga um passo ao próximo */
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 3.5rem;
+    left: calc(100% + .25rem);
+    width: calc(1.75rem - .5rem);
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--orange) 0 4px, transparent 4px 8px);
+  }
+}
+
+.passo-num {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: .875rem;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.passo:nth-child(even) .passo-num {
+  background: var(--orange);
+}
+
+@media (width < 62.5rem) {
+  .passos {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+
+  .passo:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (width <= 40rem) {
+  #como-funciona {
+    padding-block: 4rem;
+  }
+
+  .passo {
+    padding: 1.75rem 1.5rem;
+  }
+}

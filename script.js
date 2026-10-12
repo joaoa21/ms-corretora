@@ -6,10 +6,18 @@ function linkWhatsApp(mensagem) {
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
 }
 
+// ── Medição (Umami, sem cookies). Só registra algo se o script do Umami estiver ativo no <head>. ──
+function medir(evento, dados) {
+  window.umami?.track(evento, dados);
+}
+
 document.querySelectorAll("[data-wa]").forEach((link) => {
   link.href = linkWhatsApp(MSG_PADRAO);
   link.target = "_blank";
   link.rel = "noopener";
+  link.addEventListener("click", () => {
+    medir("whatsapp", { onde: link.closest("section, footer, header")?.id || link.closest("section, footer, header")?.tagName.toLowerCase() || "pagina" });
+  });
 });
 
 // (o scroll suave do Lenis fica em animacoes.js, sincronizado com o GSAP)
@@ -35,6 +43,10 @@ if (menuToggle) {
     header.classList.toggle("menu-open", aberto);
     menuToggle.setAttribute("aria-expanded", aberto);
     menuToggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+
+    // a página de trás não rola enquanto o menu está aberto
+    document.documentElement.classList.toggle("menu-aberto", aberto);
+    if (window.lenis) aberto ? window.lenis.stop() : window.lenis.start();
   };
 
   menuToggle.addEventListener("click", () => {
@@ -67,13 +79,29 @@ if (form) {
     campoTelefone.value = v;
   });
 
+  // o que aparece embaixo do campo quando ele está vazio ou incompleto
+  const mensagens = {
+    "f-nome": "Informe seu nome.",
+    "f-telefone": "Informe seu WhatsApp com DDD.",
+    "f-seguro": "Escolha o tipo de seguro."
+  };
+
+  const mostrarErro = (campo, texto) => {
+    campo.setAttribute("aria-invalid", !!texto);
+    const msg = document.getElementById(campo.id + "-msg");
+    if (msg) msg.textContent = texto || "";
+  };
+
+  const botao = form.querySelector('button[type="submit"]');
+  const sucesso = document.querySelector("#form-sucesso");
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let primeiroInvalido = null;
     form.querySelectorAll("[required]").forEach((campo) => {
       const valido = campo.checkValidity();
-      campo.setAttribute("aria-invalid", !valido);
+      mostrarErro(campo, valido ? "" : mensagens[campo.id]);
       if (!valido && !primeiroInvalido) primeiroInvalido = campo;
     });
 
@@ -94,12 +122,28 @@ if (form) {
     const mensagem = dados.get("mensagem").trim();
     if (mensagem) linhas.push(`*Mensagem:* ${mensagem}`);
 
-    window.open(linkWhatsApp(linhas.join("\n")), "_blank", "noopener");
+    const link = linkWhatsApp(linhas.join("\n"));
+    window.open(link, "_blank", "noopener");
+    medir("cotacao", { seguro: dados.get("seguro") });
+
+    // avisa o que aconteceu e evita envio duplo; o link serve se o navegador bloqueou a aba
+    if (sucesso) {
+      sucesso.querySelector("#form-sucesso-link").href = link;
+      sucesso.hidden = false;
+    }
+    const textoOriginal = botao.textContent;
+    botao.disabled = true;
+    botao.textContent = "Mensagem pronta no WhatsApp";
+    setTimeout(() => {
+      botao.disabled = false;
+      botao.textContent = textoOriginal;
+    }, 6000);
   });
 
+  // a mensagem de erro some assim que a pessoa corrige o campo
   form.querySelectorAll("[required]").forEach((campo) => {
-    campo.addEventListener("input", () => campo.removeAttribute("aria-invalid"));
-    campo.addEventListener("change", () => campo.removeAttribute("aria-invalid"));
+    campo.addEventListener("input", () => mostrarErro(campo, ""));
+    campo.addEventListener("change", () => mostrarErro(campo, ""));
   });
 
   // vindo da página de produtos (index.html?seguro=Seguro%20Auto#cotacao),

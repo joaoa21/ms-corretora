@@ -163,9 +163,18 @@
   <link rel="stylesheet" href="styles/products.css">
   <link rel="stylesheet" href="styles/seguradoras.css">
   <link rel="stylesheet" href="styles/sobre.css">
+  <link rel="stylesheet" href="styles/como-funciona.css">
   <link rel="stylesheet" href="styles/cotacao.css">
   <link rel="stylesheet" href="styles/duvidas.css">
   <link rel="stylesheet" href="styles/footer.css">
+
+  <!--
+    Medição de acessos (Umami Cloud: gratuito, sem cookies, não exige aviso de cookies).
+    Para ativar: crie a conta em https://cloud.umami.is, cadastre o site, copie o
+    "website id" e troque SEU-ID-AQUI abaixo, tirando os marcadores de comentário.
+    Os cliques no WhatsApp e os envios do formulário já são contados pelo script.js.
+  -->
+  <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="SEU-ID-AQUI"></script> -->
 
   <script src="vendor/lenis.min.js" defer></script>
   <script src="vendor/gsap.min.js" defer></script>
@@ -175,9 +184,12 @@
 </head>
 
 <body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
   <header>
     <div class="container" data-hero>
-      <nav>
+      <nav aria-label="Principal">
         <a href="#inicio" class="logo">
           <img src="assets/logo-1.svg" alt="MS Corretora de Seguros" width="300" height="92">
         </a>
@@ -198,7 +210,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="s-hero" id="inicio">
       <div class="s-hero-bg"></div>
         <div class="container">
@@ -209,7 +221,7 @@
                   Proteja o que mais <span>importa</span> para você
                 </h1>
                 <p data-hero>
-                  Seguros de vida, auto, residencial, moto e muito mais. Cotação online em minutos, processo 100% digital e atendimento personalizado com o melhor custo-benefício do mercado.
+                  Seguros de vida, auto, residencial, moto e muito mais. Cotação rápida pelo WhatsApp, contratação digital e um consultor dedicado para encontrar o melhor custo-benefício para você.
                 </p>
               </div>
               <div class="hero-action" data-hero>
@@ -236,7 +248,7 @@
               </div>
             </div>
 
-            <div class="right-hero mobile-hidden">
+            <div class="right-hero">
               <div class="photo-card" data-hero>
                 <img src="assets/pessoa-2.webp" alt="Cliente sorridente apontando para o texto" class="p1" width="459" height="478" loading="lazy">
               </div>
@@ -269,7 +281,7 @@
         </div>
 
         <div class="product-grid" data-reveal-group>
-          <a href="produtos.html#seguro-de-vida" class="product-card">
+          <a href="seguros/seguro-de-vida/" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
             </div>
@@ -278,7 +290,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#residencial" class="product-card">
+          <a href="seguros/seguro-residencial/" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
             </div>
@@ -287,7 +299,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#seguro-auto" class="product-card">
+          <a href="seguros/seguro-auto/" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
             </div>
@@ -296,7 +308,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#eletronicos" class="product-card">
+          <a href="seguros/seguro-eletronicos/" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
             </div>
@@ -305,7 +317,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#seguro-viagem" class="product-card">
+          <a href="seguros/seguro-viagem/" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
             </div>
@@ -314,7 +326,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#transporte-de-cargas" class="product-card">
+          <a href="seguros/seguro-transporte-cargas/" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
             </div>
@@ -323,7 +335,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#seguro-moto" class="product-card">
+          <a href="seguros/seguro-moto/" class="product-card">
             <div class="product-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
             </div>
@@ -332,7 +344,7 @@
             <span class="product-link">Saiba mais</span>
           </a>
 
-          <a href="produtos.html#empresarial" class="product-card">
+          <a href="seguros/seguro-empresarial/" class="product-card">
             <div class="product-icon orange">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
             </div>
@@ -447,6 +459,38 @@
       </div>
     </section>
 
+    <section id="como-funciona">
+      <div class="container">
+        <div class="products-header" data-reveal-group>
+          <span class="section-label">Como funciona</span>
+          <h2 class="section-title">Do pedido à apólice em <span>3&nbsp;passos</span></h2>
+          <p class="section-sub">Você não precisa entender de seguro. A gente compara, explica e cuida de tudo.</p>
+        </div>
+
+        <ol class="passos" data-reveal-group>
+          <li class="passo">
+            <span class="passo-num" aria-hidden="true">1</span>
+            <h3>Conte o que você precisa</h3>
+            <p>Preencha o formulário ou chame no WhatsApp. Leva um minuto e não tem compromisso.</p>
+          </li>
+          <li class="passo">
+            <span class="passo-num" aria-hidden="true">2</span>
+            <h3>Comparamos as seguradoras</h3>
+            <p>Um consultor monta propostas nas principais seguradoras e mostra um comparativo claro de coberturas e preços.</p>
+          </li>
+          <li class="passo">
+            <span class="passo-num" aria-hidden="true">3</span>
+            <h3>Contrate sem burocracia</h3>
+            <p>Você escolhe, assina digitalmente e recebe a apólice. Depois, cuidamos da renovação e acompanhamos você em caso de sinistro.</p>
+          </li>
+        </ol>
+
+        <div class="product-cta" data-reveal>
+          <a href="#cotacao" class="btn btn-claro">Começar minha cotação</a>
+        </div>
+      </div>
+    </section>
+
     <section id="cotacao">
       <div class="container">
         <div class="cotacao-inner">
@@ -487,17 +531,19 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="f-nome">Nome *</label>
-                <input type="text" id="f-nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+                <input type="text" id="f-nome" name="nome" placeholder="Seu nome" autocomplete="name" required aria-describedby="f-nome-msg">
+                <small class="form-msg" id="f-nome-msg" aria-live="polite"></small>
               </div>
               <div class="form-group">
                 <label for="f-telefone">WhatsApp *</label>
-                <input type="tel" id="f-telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel-national" inputmode="numeric" minlength="14" required>
+                <input type="tel" id="f-telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="numeric" minlength="14" required aria-describedby="f-telefone-msg">
+                <small class="form-msg" id="f-telefone-msg" aria-live="polite"></small>
               </div>
             </div>
 
             <div class="form-group">
               <label for="f-seguro">Tipo de seguro *</label>
-              <select id="f-seguro" name="seguro" required>
+              <select id="f-seguro" name="seguro" required data-lenis-prevent aria-describedby="f-seguro-msg">
                 <option value="" disabled selected>Selecione</option>
                 <option>Seguro de Vida</option>
                 <option>Residencial</option>
@@ -509,6 +555,7 @@
                 <option>Empresarial</option>
                 <option>Outro</option>
               </select>
+              <small class="form-msg" id="f-seguro-msg" aria-live="polite"></small>
             </div>
 
             <div class="form-group">
@@ -520,7 +567,10 @@
               Enviar pelo WhatsApp
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <p class="form-nota">Seus dados são usados apenas para elaborar a sua cotação.</p>
+            <p class="form-sucesso" id="form-sucesso" role="status" hidden>
+              Abrimos o WhatsApp em outra aba com a sua mensagem pronta. Não abriu? <a href="#" id="form-sucesso-link" target="_blank" rel="noopener">Toque aqui</a>.
+            </p>
+            <p class="form-nota">Seus dados são usados apenas para elaborar a sua cotação. Veja a <a href="privacidade.html">política de privacidade</a>.</p>
           </form>
         </div>
       </div>
@@ -606,11 +656,11 @@
         <div class="footer-col">
           <h3>Seguros</h3>
           <ul>
-            <li><a href="produtos.html#seguro-de-vida">Seguro de Vida</a></li>
-            <li><a href="produtos.html#seguro-auto">Seguro Auto</a></li>
-            <li><a href="produtos.html#residencial">Residencial</a></li>
-            <li><a href="produtos.html#empresarial">Empresarial</a></li>
-            <li><a href="produtos.html#seguro-viagem">Seguro Viagem</a></li>
+            <li><a href="seguros/seguro-de-vida/">Seguro de Vida</a></li>
+            <li><a href="seguros/seguro-auto/">Seguro Auto</a></li>
+            <li><a href="seguros/seguro-residencial/">Residencial</a></li>
+            <li><a href="seguros/seguro-empresarial/">Empresarial</a></li>
+            <li><a href="seguros/seguro-viagem/">Seguro Viagem</a></li>
           </ul>
         </div>
 
@@ -620,6 +670,7 @@
             <li><a href="#sobre">Sobre a MS</a></li>
             <li><a href="#cotacao">Solicitar cotação</a></li>
             <li><a href="#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="privacidade.html">Política de privacidade</a></li>
           </ul>
         </div>
 
@@ -639,9 +690,5 @@
       </div>
     </div>
   </footer>
-
-  <a data-wa href="#cotacao" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-  </a>
 </body>
 </html>

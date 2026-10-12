@@ -168,6 +168,151 @@
   }
 }
 
+/*
+  Menu de "Tipo de seguro" com a cara do site (select customizável).
+  Chrome e Edge aplicam tudo; os outros navegadores mostram a lista nativa,
+  que no celular é o seletor de rolagem do próprio sistema.
+*/
+@supports (appearance: base-select) {
+  .form-group select,
+  .form-group select::picker(select) {
+    appearance: base-select;
+  }
+
+  .form-group select {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover:not(:focus) {
+      border-color: rgba(240,120,32,.35);
+    }
+
+    /* aberto: mesmo destaque do campo em foco */
+    &:open {
+      border-color: var(--orange);
+      background: var(--white);
+    }
+
+    /* seta em "V" laranja que vira ao abrir */
+    &::picker-icon {
+      content: "";
+      width: 1.1rem;
+      height: 1.1rem;
+      background-color: var(--orange-txt);
+      -webkit-mask: var(--chevron) center / contain no-repeat;
+      mask: var(--chevron) center / contain no-repeat;
+      transition: rotate .25s ease;
+    }
+
+    &:open::picker-icon {
+      rotate: 180deg;
+    }
+  }
+
+  /* a lista */
+  .form-group select::picker(select) {
+    margin-top: .5rem;
+    padding: .4rem;
+    border: 1px solid rgba(12,31,74,.08);
+    border-radius: .875rem;
+    background: var(--white);
+    box-shadow: 0 1rem 2.5rem rgba(12,31,74,.16);
+
+    /* abre deslizando e aparecendo */
+    opacity: 0;
+    translate: 0 -.5rem;
+    transition: opacity .2s ease, translate .2s ease, overlay .2s allow-discrete, display .2s allow-discrete;
+  }
+
+  .form-group select:open::picker(select) {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  @starting-style {
+    .form-group select:open::picker(select) {
+      opacity: 0;
+      translate: 0 -.5rem;
+    }
+  }
+
+  .form-group option {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .7rem .9rem;
+    border-radius: .6rem;
+    color: var(--navy);
+    font-size: .975rem;
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease;
+
+    /* "Selecione" aparece no campo, mas não na lista */
+    &[disabled] {
+      display: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background: var(--gray);
+    }
+
+    &:checked {
+      background: rgba(240,120,32,.1);
+      color: var(--orange-txt);
+      font-weight: 600;
+    }
+
+    /* check do item escolhido: o mesmo dos outros checks do site, à direita */
+    &::checkmark {
+      content: "";
+      order: 1;
+      margin-left: auto;
+      width: .9rem;
+      height: .9rem;
+      background: var(--check-laranja) center / contain no-repeat;
+    }
+  }
+}
+
+/* mensagem de erro embaixo do campo (preenchida pelo script.js) */
+.form-msg {
+  display: none;
+  font-size: .8rem;
+  font-weight: 500;
+  color: #c5221f;
+
+  &:not(:empty) {
+    display: block;
+  }
+}
+
+.form-sucesso {
+  padding: .9rem 1rem;
+  border-radius: .625rem;
+  background: rgba(37,211,102,.12);
+  border: 1px solid rgba(37,211,102,.45);
+  color: #0b6b3a;
+  font-size: .9rem;
+  line-height: 1.5;
+
+  & a {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+.form-nota a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: var(--orange-txt);
+  }
+}
+
 .form-nota {
   font-size: .8rem;
   color: var(--muted);

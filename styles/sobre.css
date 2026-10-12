@@ -74,7 +74,7 @@
 }
 
 .sobre-float strong { font-family:'Bricolage Grotesque',sans-serif; font-size: 2rem; font-weight: 800; display: block; }
-.sobre-float span { font-size:.78rem; font-weight:500; opacity:.9; }
+.sobre-float span { font-size:.78rem; font-weight:500; }
 
 .sobre-text .section-title,
 .sobre-text .section-sub {

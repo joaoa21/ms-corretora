@@ -1,0 +1,100 @@
+# Configuração do Netlify (o .htaccess não vale aqui).
+# HTTPS, compressão, página 404 e redirecionamento do www já são automáticos.
+
+# ── Endereço único: /index.html vira / ──
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+# ── Modo manutenção ──
+# Para ativar, tire o "#" das linhas abaixo e publique. Todo o site passa a mostrar
+# a página 503.html (os arquivos que ela usa continuam liberados). Para voltar, comente de novo.
+# [[redirects]]
+#   from = "/styles/*"
+#   to = "/styles/:splat"
+#   status = 200
+# [[redirects]]
+#   from = "/fonts/*"
+#   to = "/fonts/:splat"
+#   status = 200
+# [[redirects]]
+#   from = "/assets/*"
+#   to = "/assets/:splat"
+#   status = 200
+# [[redirects]]
+#   from = "/icons/*"
+#   to = "/icons/:splat"
+#   status = 200
+# [[redirects]]
+#   from = "/script.js"
+#   to = "/script.js"
+#   status = 200
+# [[redirects]]
+#   from = "/favicon.ico"
+#   to = "/favicon.ico"
+#   status = 200
+# [[redirects]]
+#   from = "/*"
+#   to = "/503.html"
+#   status = 302
+#   force = true
+
+# ── Segurança básica ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ── Cache no navegador de quem visita ──
+# Páginas: sempre conferem se há versão nova
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# CSS e JS do site: 1 dia (uma mudança aparece para todos no máximo no dia seguinte)
+[[headers]]
+  for = "/styles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Imagens, ícones, fontes e bibliotecas: mudam raramente, 1 ano
+# (se trocar uma imagem, troque também o nome do arquivo)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

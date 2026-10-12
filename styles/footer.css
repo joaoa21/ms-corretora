@@ -94,31 +94,6 @@ footer {
   font-size: .85rem;
 }
 
-.whatsapp-float {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 900;
-  display: grid;
-  place-items: center;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 50%;
-  background: #25D366;
-  box-shadow: 0 .5rem 1.5rem rgba(37,211,102,.45);
-  transition: transform .3s ease;
-
-  &:hover {
-    transform: scale(1.08);
-  }
-
-  & svg {
-    width: 1.9rem;
-    height: 1.9rem;
-    fill: var(--white);
-  }
-}
-
 @media (width < 62.5rem) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -131,18 +106,16 @@ footer {
 
 @media (width <= 40rem) {
   .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1.5rem;
+  }
+
+  /* marca e contato ocupam a linha inteira; Seguros e Institucional dividem uma linha */
+  .footer-col:last-child {
+    grid-column: 1 / -1;
   }
 
   .footer-bottom {
     flex-direction: column;
-  }
-
-  .whatsapp-float {
-    right: 1rem;
-    bottom: 1rem;
-    width: 3.25rem;
-    height: 3.25rem;
   }
 }

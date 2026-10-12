@@ -1,0 +1,262 @@
+/* ── Página de um seguro (seguros/<nome>/) ── */
+
+.page-hero-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+
+/* ── Coberturas ── */
+.seguro-coberturas {
+  background: var(--gray);
+  padding-block: 6rem;
+
+  & .products-header {
+    text-align: center;
+    margin: 0 auto 3.5rem;
+  }
+}
+
+.coberturas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cobertura {
+  background: var(--white);
+  border-radius: 1.125rem;
+  padding: 1.75rem 1.5rem;
+  border: 1.5px solid transparent;
+  transition: box-shadow .3s ease, border-color .3s ease;
+
+  &:hover {
+    box-shadow: var(--shadow);
+    border-color: rgba(240,120,32,.2);
+  }
+
+  & h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 1rem 0 .5rem;
+  }
+
+  & p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: .95rem;
+  }
+}
+
+.cobertura-icone {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .75rem;
+  background: var(--check-laranja) center / 50% no-repeat, rgba(240,120,32,.12);
+}
+
+.coberturas-nota {
+  margin: 2.5rem auto 0;
+  max-width: 44rem;
+  text-align: center;
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Para quem é / Bom saber ── */
+.seguro-detalhes {
+  background: var(--white);
+  padding-block: 6rem;
+}
+
+.detalhes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.detalhe-card {
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  background: var(--gray);
+
+  & h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  & .product-icon {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.detalhe-card--escuro {
+  background: var(--navy);
+  color: var(--white);
+
+  & h2 {
+    color: var(--white);
+  }
+}
+
+.lista-check {
+  list-style: none;
+  display: grid;
+  gap: .9rem;
+
+  & li {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    line-height: 1.5;
+    color: var(--text);
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-top: .05rem;
+      border-radius: 50%;
+      background: var(--check-laranja) center / 55% no-repeat, rgba(240,120,32,.14);
+    }
+  }
+}
+
+.lista-dicas {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  counter-reset: dica;
+
+  & li {
+    position: relative;
+    padding-left: 2.75rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,.85);
+    counter-increment: dica;
+
+    &::before {
+      content: counter(dica);
+      position: absolute;
+      left: 0;
+      top: .05rem;
+      display: grid;
+      place-items: center;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: .5rem;
+      background: rgba(240,120,32,.2);
+      border: 1.5px solid var(--orange);
+      color: var(--orange);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+  }
+}
+
+/* ── Dúvidas do seguro ── */
+.seguro-faq {
+  background: var(--white);
+  padding-block: 0 6rem;
+
+  & .products-header {
+    text-align: center;
+    margin: 0 auto 2.5rem;
+  }
+}
+
+.faq-list--centro {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+/* ── Chamada final e outros seguros ── */
+.seguro-final {
+  background: var(--gray);
+  padding-block: 5rem;
+
+  & .produtos-cta {
+    margin-top: 0;
+  }
+}
+
+.outros-seguros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 2.5rem;
+
+  & span {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-right: .4rem;
+  }
+
+  & a {
+    padding: .5rem 1.1rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--navy);
+    background: var(--white);
+    box-shadow: inset 0 0 0 1px rgba(12,31,74,.1);
+    transition: color .3s ease, box-shadow .3s ease, background-color .3s ease;
+
+    &:hover {
+      color: var(--orange-txt);
+      box-shadow: inset 0 0 0 1px var(--orange);
+    }
+  }
+
+  & .outros-seguros-todos {
+    color: var(--orange-txt);
+    font-weight: 600;
+  }
+}
+
+@media (width < 62.5rem) {
+  .coberturas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detalhes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 40rem) {
+  .seguro-coberturas,
+  .seguro-detalhes {
+    padding-block: 4rem;
+  }
+
+  .seguro-faq {
+    padding-bottom: 4rem;
+  }
+
+  .coberturas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detalhe-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .page-hero-acoes {
+    flex-direction: column;
+
+    & .btn {
+      justify-content: center;
+    }
+  }
+}

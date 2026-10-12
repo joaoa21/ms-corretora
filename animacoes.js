@@ -60,6 +60,7 @@
       anchors: { offset: -80 }
     });
 
+    window.lenis = lenis;
     const tick = (tempo) => lenis.raf(tempo * 1000);
 
     lenis.on("scroll", ScrollTrigger.update);
@@ -69,6 +70,7 @@
     return () => {
       gsap.ticker.remove(tick);
       lenis.destroy();
+      window.lenis = null;
     };
   }
 
