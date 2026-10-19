@@ -42,7 +42,6 @@
   // camadas em velocidades diferentes: só no desktop (no celular tudo é uma coluna só)
   mm.add("(prefers-reduced-motion: no-preference) and (min-width: 62.5rem)", () => {
     parallaxHero();
-    parallaxProdutos();
     parallaxSobre();
   });
 
@@ -244,21 +243,6 @@
     const fotos = gsap.utils.toArray(".photo-card");
     [0, 14, -10].forEach((desvio, i) => {
       if (fotos[i]) gsap.to(fotos[i], { yPercent: desvio, ease: "none", scrollTrigger: rolagemDoHero });
-    });
-  }
-
-  function parallaxProdutos() {
-    const cards = gsap.utils.toArray(".product-grid .product-card");
-    if (!cards.length) return;
-
-    // colunas pares e ímpares sobem em ritmos diferentes
-    cards.forEach((card, i) => {
-      const coluna = i % 4;
-      gsap.fromTo(card, { yPercent: coluna % 2 ? 10 : 0 }, {
-        yPercent: coluna % 2 ? -10 : 0,
-        ease: "none",
-        scrollTrigger: { trigger: ".product-grid", start: "top bottom", end: "bottom top", scrub: true }
-      });
     });
   }
 
