@@ -7,13 +7,18 @@ footer {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.6fr repeat(3, 1fr);
+  grid-template-columns: 1.3fr 1.9fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .footer-brand {
+  /* o link ocupa exatamente a imagem: área de clique e contorno de foco certos */
+  & .logo {
+    display: inline-block;
+  }
+
   & .logo img {
     width: 7rem;
   }
@@ -85,6 +90,16 @@ footer {
   }
 }
 
+/* lista de seguros em duas colunas para o rodapé não ficar comprido demais */
+.footer-col ul.footer-lista-seguros {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* preenche coluna por coluna, na ordem dos cards (6 na primeira, o resto na segunda) */
+  grid-template-rows: repeat(6, auto);
+  grid-auto-flow: column;
+  column-gap: 1.5rem;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -97,6 +112,12 @@ footer {
 @media (width < 62.5rem) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col ul.footer-lista-seguros {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
   }
 
   .footer-brand {

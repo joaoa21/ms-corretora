@@ -28,13 +28,14 @@
   mm.add("(prefers-reduced-motion: no-preference)", () => {
     const pararScroll = iniciarScrollSuave();
     animarEntrada();
-    revelarAoRolar();
+    const pararRevelar = revelarAoRolar();
     acenderPalavras();
     abrirCotacao();
     const pararCarrossel = carrosselComRolagem();
 
     return () => {
       pararScroll?.();
+      pararRevelar?.();
       pararCarrossel?.();
     };
   });
@@ -63,11 +64,15 @@
     const tick = (tempo) => lenis.raf(tempo * 1000);
 
     lenis.on("scroll", ScrollTrigger.update);
+    // o Lenis só avisa da rolagem que ele mesmo faz; saltos do navegador (tecla End,
+    // recarregar a página no meio) também precisam atualizar os efeitos ligados à rolagem
+    window.addEventListener("scroll", ScrollTrigger.update, { passive: true });
     gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
       gsap.ticker.remove(tick);
+      window.removeEventListener("scroll", ScrollTrigger.update);
       lenis.destroy();
       window.lenis = null;
     };
@@ -125,11 +130,15 @@
       });
     });
 
-    ScrollTrigger.batch(alvos, {
-      // clamp: itens no fim da página disparam mesmo sem chegar a 88% da tela
-      start: "clamp(top 88%)",
-      once: true,
-      onEnter: (lote) => gsap.to(lote, {
+    // IntersectionObserver é do próprio navegador: avisa quando o elemento aparece na tela
+    // seja qual for a forma de rolar (roda do mouse, tecla End, link, recarregar no fim).
+    // Os elementos que aparecem juntos entram em sequência.
+    const observador = new IntersectionObserver((entradas) => {
+      const lote = entradas.filter((e) => e.isIntersecting).map((e) => e.target);
+      if (!lote.length) return;
+      lote.forEach((el) => observador.unobserve(el));
+
+      gsap.to(lote, {
         autoAlpha: 1,
         x: 0,
         y: 0,
@@ -140,8 +149,11 @@
         // "auto" só interrompe as mesmas propriedades: o parallax (yPercent) continua
         overwrite: "auto",
         clearProps: "transition"
-      })
-    });
+      });
+    }, { threshold: 0.1 });
+
+    alvos.forEach((el) => observador.observe(el));
+    return () => observador.disconnect();
   }
 
   // ── Títulos que "acendem" palavra por palavra no ritmo da rolagem ──

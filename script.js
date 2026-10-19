@@ -22,6 +22,22 @@ document.querySelectorAll("[data-wa]").forEach((link) => {
 
 // (o scroll suave do Lenis fica em animacoes.js, sincronizado com o GSAP)
 
+// ── Links para a própria página (logo, "Início"): sobem até o topo sem recarregar ──
+// e sem deixar "#alguma-coisa" no endereço. Sem JavaScript, o link recarrega a página no topo.
+document.querySelectorAll("a[href]").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const destino = new URL(link.href, location.href);
+    const mesmaPagina = destino.origin === location.origin && destino.pathname === location.pathname;
+    if (!mesmaPagina || destino.hash || link.target === "_blank") return;
+
+    e.preventDefault();
+    const reduzMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (window.lenis) window.lenis.scrollTo(0);
+    else window.scrollTo({ top: 0, behavior: reduzMovimento ? "auto" : "smooth" });
+    history.replaceState(null, "", location.pathname + location.search);
+  });
+});
+
 // ── Pausa animações que estão fora da tela (alivia a rolagem) ──
 const observador = new IntersectionObserver((entradas) => {
   entradas.forEach((e) => e.target.classList.toggle("pausado", !e.isIntersecting));
