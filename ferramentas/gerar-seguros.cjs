@@ -31,21 +31,20 @@ function bloco(inicio, fim) {
 const header = bloco('  <header>', '</header>');
 const footer = bloco('  <footer>', '</footer>');
 
-// ícone de cada seguro, copiado do card correspondente em produtos.html
-function icone(nomeNoCard) {
-  // acha o título do card (pode estar dentro de um link) e pega o ícone logo antes dele
-  const reTitulo = new RegExp(`<h2>(?:<a [^>]*>)?${nomeNoCard.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:<\\/a>)?<\\/h2>`);
-  const posTitulo = produtos.search(reTitulo);
-  if (posTitulo < 0) throw new Error('card não encontrado em produtos.html para: ' + nomeNoCard);
-  const antes = produtos.slice(0, posTitulo);
-  const inicioIcone = antes.lastIndexOf('<div class="product-icon');
-  const trecho = antes.slice(inicioIcone);
+// ícone de cada seguro, copiado do card em produtos.html que aponta para a página dele
+function icone(slug) {
+  const pos = produtos.indexOf(`href="seguros/${slug}/">`);
+  if (pos < 0) throw new Error('card não encontrado em produtos.html para: ' + slug);
+  const antes = produtos.slice(0, pos);
+  const trecho = antes.slice(antes.lastIndexOf('<div class="product-icon'));
   const m = trecho.match(/<svg[\s\S]*?<\/svg>/);
-  if (!m) throw new Error('ícone não encontrado em produtos.html para: ' + nomeNoCard);
+  if (!m) throw new Error('ícone não encontrado em produtos.html para: ' + slug);
   return m[0];
 }
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+// texto comum dentro do HTML ("D&O" vira "D&amp;O"); o h1 é a exceção, porque já vem com <span>
+const h = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const semTags = (s) => s.replace(/<[^>]+>/g, '');
 const json = (o) => JSON.stringify(o, null, 2).split('\n').map((l) => '  ' + l).join('\n');
 const hoje = new Date().toISOString().slice(0, 10);
@@ -173,21 +172,21 @@ ${header}
             <span aria-hidden="true">/</span>
             <a href="/produtos.html">Produtos</a>
             <span aria-hidden="true">/</span>
-            <span aria-current="page">${s.nome}</span>
+            <span aria-current="page">${h(s.nome)}</span>
           </nav>
 
           <h1 data-hero-titulo>${s.h1}</h1>
-          <p data-hero>${s.intro[0]}</p>
+          <p data-hero>${h(s.intro[0])}</p>
 
           <div class="page-hero-acoes" data-hero>
-            <a href="${cotar}" class="btn">Cotar ${s.nome}<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="${cotar}" class="btn">Cotar ${h(s.nome)}<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a data-wa href="/#cotacao" class="btn secondary">Falar no WhatsApp</a>
           </div>
         </div>
 
-        <aside class="page-hero-painel" data-hero aria-label="Resumo do ${s.nome}">
+        <aside class="page-hero-painel" data-hero aria-label="Resumo do ${esc(s.nome)}">
           <ul>
-${s.destaques.map((d) => `            <li><strong>${d.valor}</strong><span>${d.texto}</span></li>`).join('\n')}
+${s.destaques.map((d) => `            <li><strong>${h(d.valor)}</strong><span>${h(d.texto)}</span></li>`).join('\n')}
           </ul>
         </aside>
       </div>
@@ -197,15 +196,15 @@ ${s.destaques.map((d) => `            <li><strong>${d.valor}</strong><span>${d.t
       <div class="container">
         <div class="products-header" data-reveal-group>
           <span class="section-label">Coberturas</span>
-          <h2 class="section-title">O que o <span>${s.nome}</span> cobre</h2>
-          <p class="section-sub">${s.intro[1]}</p>
+          <h2 class="section-title">O que o <span>${h(s.nome)}</span> cobre</h2>
+          <p class="section-sub">${h(s.intro[1])}</p>
         </div>
 
         <div class="coberturas-grid" data-reveal-group>
 ${s.coberturas.map((c) => `          <article class="cobertura">
             <span class="cobertura-icone" aria-hidden="true"></span>
-            <h3>${c.titulo}</h3>
-            <p>${c.texto}</p>
+            <h3>${h(c.titulo)}</h3>
+            <p>${h(c.texto)}</p>
           </article>`).join('\n')}
         </div>
 
@@ -217,17 +216,17 @@ ${s.coberturas.map((c) => `          <article class="cobertura">
       <div class="container">
         <div class="detalhes-grid">
           <div class="detalhe-card" data-reveal="left">
-            <div class="product-icon ${s.cor === 'orange' ? 'orange' : ''}">${icone(s.opcaoFormulario)}</div>
+            <div class="product-icon ${s.cor === 'orange' ? 'orange' : ''}">${icone(s.slug)}</div>
             <h2>Para quem é indicado</h2>
             <ul class="lista-check">
-${s.idealPara.map((i) => `              <li>${i}</li>`).join('\n')}
+${s.idealPara.map((i) => `              <li>${h(i)}</li>`).join('\n')}
             </ul>
           </div>
 
           <div class="detalhe-card detalhe-card--escuro" data-reveal="right">
             <h2>Bom saber antes de contratar</h2>
             <ol class="lista-dicas">
-${s.bomSaber.map((d) => `              <li>${d}</li>`).join('\n')}
+${s.bomSaber.map((d) => `              <li>${h(d)}</li>`).join('\n')}
             </ol>
           </div>
         </div>
@@ -249,14 +248,14 @@ ${passos}
       <div class="container">
         <div class="products-header" data-reveal-group>
           <span class="section-label">Dúvidas</span>
-          <h2 class="section-title">Perguntas sobre o ${s.nome}</h2>
+          <h2 class="section-title">Perguntas sobre o ${h(s.nome)}</h2>
         </div>
 
         <div class="faq-list faq-list--centro" data-reveal-group>
 ${s.faq.map((f, i) => `          <details class="faq-item" name="faq"${i === 0 ? ' open' : ''}>
-            <summary>${f.p}</summary>
+            <summary>${h(f.p)}</summary>
             <div class="faq-a">
-              <p>${f.r}</p>
+              <p>${h(f.r)}</p>
             </div>
           </details>`).join('\n')}
         </div>
@@ -267,7 +266,7 @@ ${s.faq.map((f, i) => `          <details class="faq-item" name="faq"${i === 0 ?
       <div class="container">
         <div class="produtos-cta" data-reveal>
           <div>
-            <h2>Pronto para cotar o ${s.nome}?</h2>
+            <h2>Pronto para cotar o ${h(s.nome)}?</h2>
             <p>Preencha o formulário em um minuto ou chame no WhatsApp. Sem compromisso.</p>
           </div>
           <div class="produtos-cta-acoes">
@@ -278,7 +277,7 @@ ${s.faq.map((f, i) => `          <details class="faq-item" name="faq"${i === 0 ?
 
         <nav class="outros-seguros" aria-label="Outros seguros" data-reveal>
           <span>Veja também:</span>
-${outros.map((o) => `          <a href="/seguros/${o.slug}/">${o.curto}</a>`).join('\n')}
+${outros.map((o) => `          <a href="/seguros/${o.slug}/">${h(o.curto)}</a>`).join('\n')}
           <a href="/produtos.html" class="outros-seguros-todos">Todos os seguros</a>
         </nav>
       </div>

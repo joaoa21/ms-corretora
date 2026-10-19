@@ -56,6 +56,23 @@
   transform:scaleX(1); 
 }
 
+/* 12º card: chamada para quem não achou o seguro na lista */
+.product-card.product-card--chamada {
+  background: var(--navy);
+
+  & h3 {
+    color: var(--white);
+  }
+
+  & p {
+    color: rgba(255,255,255,.72);
+  }
+
+  & .product-link {
+    color: var(--orange);
+  }
+}
+
 .product-icon {
   width: 3rem;
   height: 3rem;

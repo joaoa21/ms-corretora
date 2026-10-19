@@ -13,17 +13,44 @@
       "Comparamos as opções das principais seguradoras do país e montamos a cobertura no tamanho da sua necessidade e do seu bolso, sem exageros e sem faltar o essencial."
     ],
     "destaques": [
-      { "valor": "24h", "texto": "assistência funeral e apoio à família" },
-      { "valor": "0", "texto": "burocracia: contratação digital" },
-      { "valor": "+5", "texto": "seguradoras comparadas na cotação" }
+      {
+        "valor": "24h",
+        "texto": "assistência funeral e apoio à família"
+      },
+      {
+        "valor": "0",
+        "texto": "burocracia: contratação digital"
+      },
+      {
+        "valor": "+5",
+        "texto": "seguradoras comparadas na cotação"
+      }
     ],
     "coberturas": [
-      { "titulo": "Morte natural ou acidental", "texto": "Indenização paga aos beneficiários que você escolher, livre de inventário e de imposto de renda." },
-      { "titulo": "Invalidez permanente", "texto": "Proteção financeira se um acidente ou doença impedir você de trabalhar, total ou parcialmente." },
-      { "titulo": "Doenças graves", "texto": "Antecipa parte da indenização no diagnóstico de doenças como câncer, infarto e AVC, para custear o tratamento." },
-      { "titulo": "Diárias por incapacidade", "texto": "Renda temporária enquanto você estiver afastado do trabalho por acidente ou doença." },
-      { "titulo": "Assistência funeral", "texto": "Organização e custeio do funeral, para a família não precisar lidar com isso num momento difícil." },
-      { "titulo": "Cobertura para o cônjuge e filhos", "texto": "É possível estender parte das coberturas para a família na mesma apólice." }
+      {
+        "titulo": "Morte natural ou acidental",
+        "texto": "Indenização paga aos beneficiários que você escolher, livre de inventário e de imposto de renda."
+      },
+      {
+        "titulo": "Invalidez permanente",
+        "texto": "Proteção financeira se um acidente ou doença impedir você de trabalhar, total ou parcialmente."
+      },
+      {
+        "titulo": "Doenças graves",
+        "texto": "Antecipa parte da indenização no diagnóstico de doenças como câncer, infarto e AVC, para custear o tratamento."
+      },
+      {
+        "titulo": "Diárias por incapacidade",
+        "texto": "Renda temporária enquanto você estiver afastado do trabalho por acidente ou doença."
+      },
+      {
+        "titulo": "Assistência funeral",
+        "texto": "Organização e custeio do funeral, para a família não precisar lidar com isso num momento difícil."
+      },
+      {
+        "titulo": "Cobertura para o cônjuge e filhos",
+        "texto": "É possível estender parte das coberturas para a família na mesma apólice."
+      }
     ],
     "idealPara": [
       "Quem tem filhos, cônjuge ou pais que dependem da sua renda",
@@ -37,9 +64,18 @@
       "O preço depende da idade, da profissão, de hábitos como fumar e do valor contratado. Quanto antes contratar, menor costuma ser a mensalidade."
     ],
     "faq": [
-      { "p": "Preciso fazer exame médico para contratar?", "r": "Na maioria dos casos, não. Para os valores mais comuns, basta responder a uma declaração de saúde. Exames só costumam ser pedidos para capitais segurados altos ou quando a declaração indica alguma condição a avaliar." },
-      { "p": "Quem tem doença preexistente consegue contratar?", "r": "Sim, na maioria das situações. A doença precisa ser informada na contratação; a seguradora pode ajustar o preço ou excluir aquela condição específica da cobertura. O importante é nunca omitir a informação, para a indenização não ser questionada depois." },
-      { "p": "Qual valor de cobertura devo contratar?", "r": "Uma referência comum é algo entre 3 e 5 anos da sua renda anual, somado às dívidas que você deixaria. Na cotação, a gente faz essa conta junto com você e mostra quanto custa cada faixa de valor." }
+      {
+        "p": "Preciso fazer exame médico para contratar?",
+        "r": "Na maioria dos casos, não. Para os valores mais comuns, basta responder a uma declaração de saúde. Exames só costumam ser pedidos para capitais segurados altos ou quando a declaração indica alguma condição a avaliar."
+      },
+      {
+        "p": "Quem tem doença preexistente consegue contratar?",
+        "r": "Sim, na maioria das situações. A doença precisa ser informada na contratação; a seguradora pode ajustar o preço ou excluir aquela condição específica da cobertura. O importante é nunca omitir a informação, para a indenização não ser questionada depois."
+      },
+      {
+        "p": "Qual valor de cobertura devo contratar?",
+        "r": "Uma referência comum é algo entre 3 e 5 anos da sua renda anual, somado às dívidas que você deixaria. Na cotação, a gente faz essa conta junto com você e mostra quanto custa cada faixa de valor."
+      }
     ]
   },
   {
@@ -56,17 +92,44 @@
       "Além das coberturas contra imprevistos grandes, ele traz assistências do dia a dia, como chaveiro, encanador e eletricista, que sozinhas já costumam pagar o seguro."
     ],
     "destaques": [
-      { "valor": "24h", "texto": "chaveiro, encanador e eletricista" },
-      { "valor": "0", "texto": "vistoria na maioria dos casos" },
-      { "valor": "100%", "texto": "digital, da cotação à apólice" }
+      {
+        "valor": "24h",
+        "texto": "chaveiro, encanador e eletricista"
+      },
+      {
+        "valor": "0",
+        "texto": "vistoria na maioria dos casos"
+      },
+      {
+        "valor": "100%",
+        "texto": "digital, da cotação à apólice"
+      }
     ],
     "coberturas": [
-      { "titulo": "Incêndio, raio e explosão", "texto": "A cobertura básica, que protege a estrutura do imóvel e os bens contra os danos mais graves." },
-      { "titulo": "Roubo e furto qualificado", "texto": "Reposição de móveis, eletrônicos e objetos levados em arrombamento ou roubo." },
-      { "titulo": "Danos elétricos", "texto": "Queima de eletrodomésticos e equipamentos por curto-circuito, oscilação ou queda de raio na rede." },
-      { "titulo": "Vendaval, granizo e alagamento", "texto": "Danos causados por chuva forte, vento e enchente, conforme a cobertura escolhida." },
-      { "titulo": "Responsabilidade civil familiar", "texto": "Danos que você, sua família ou seu pet causarem a terceiros, como um vazamento no vizinho de baixo." },
-      { "titulo": "Assistência 24 horas", "texto": "Chaveiro, encanador, eletricista, vidraceiro e até conserto de eletrodomésticos, sem custo adicional." }
+      {
+        "titulo": "Incêndio, raio e explosão",
+        "texto": "A cobertura básica, que protege a estrutura do imóvel e os bens contra os danos mais graves."
+      },
+      {
+        "titulo": "Roubo e furto qualificado",
+        "texto": "Reposição de móveis, eletrônicos e objetos levados em arrombamento ou roubo."
+      },
+      {
+        "titulo": "Danos elétricos",
+        "texto": "Queima de eletrodomésticos e equipamentos por curto-circuito, oscilação ou queda de raio na rede."
+      },
+      {
+        "titulo": "Vendaval, granizo e alagamento",
+        "texto": "Danos causados por chuva forte, vento e enchente, conforme a cobertura escolhida."
+      },
+      {
+        "titulo": "Responsabilidade civil familiar",
+        "texto": "Danos que você, sua família ou seu pet causarem a terceiros, como um vazamento no vizinho de baixo."
+      },
+      {
+        "titulo": "Assistência 24 horas",
+        "texto": "Chaveiro, encanador, eletricista, vidraceiro e até conserto de eletrodomésticos, sem custo adicional."
+      }
     ],
     "idealPara": [
       "Proprietários de casas e apartamentos",
@@ -80,9 +143,18 @@
       "Guarde notas fiscais e fotos dos bens de maior valor. Isso agiliza muito a indenização em caso de sinistro."
     ],
     "faq": [
-      { "p": "O seguro residencial cobre enchente?", "r": "Depende da cobertura contratada. A básica cobre incêndio, raio e explosão; alagamento e inundação são coberturas adicionais, que indicamos conforme a região do imóvel. Na cotação, mostramos o que está incluído em cada proposta." },
-      { "p": "Preciso de vistoria para contratar?", "r": "Na maioria dos casos, não. A contratação é feita com base nas informações que você declara. Vistoria só é pedida em situações específicas, como imóveis de valor muito alto." },
-      { "p": "Quanto custa um seguro residencial?", "r": "Varia com o tamanho, a localização e as coberturas, mas para a maioria dos imóveis fica entre algumas dezenas e poucas centenas de reais por ano. É um dos seguros com melhor relação entre custo e proteção." }
+      {
+        "p": "O seguro residencial cobre enchente?",
+        "r": "Depende da cobertura contratada. A básica cobre incêndio, raio e explosão; alagamento e inundação são coberturas adicionais, que indicamos conforme a região do imóvel. Na cotação, mostramos o que está incluído em cada proposta."
+      },
+      {
+        "p": "Preciso de vistoria para contratar?",
+        "r": "Na maioria dos casos, não. A contratação é feita com base nas informações que você declara. Vistoria só é pedida em situações específicas, como imóveis de valor muito alto."
+      },
+      {
+        "p": "Quanto custa um seguro residencial?",
+        "r": "Varia com o tamanho, a localização e as coberturas, mas para a maioria dos imóveis fica entre algumas dezenas e poucas centenas de reais por ano. É um dos seguros com melhor relação entre custo e proteção."
+      }
     ]
   },
   {
@@ -99,17 +171,44 @@
       "Você escolhe o nível de proteção, do básico contra terceiros ao completo com carro reserva e vidros, e nós cuidamos de tudo, inclusive se precisar acionar o seguro."
     ],
     "destaques": [
-      { "valor": "24h", "texto": "guincho e assistência em todo o Brasil" },
-      { "valor": "+5", "texto": "seguradoras comparadas na cotação" },
-      { "valor": "0", "texto": "burocracia: nós acionamos o sinistro por você" }
+      {
+        "valor": "24h",
+        "texto": "guincho e assistência em todo o Brasil"
+      },
+      {
+        "valor": "+5",
+        "texto": "seguradoras comparadas na cotação"
+      },
+      {
+        "valor": "0",
+        "texto": "burocracia: nós acionamos o sinistro por você"
+      }
     ],
     "coberturas": [
-      { "titulo": "Colisão, incêndio e roubo", "texto": "A cobertura compreensiva: indeniza o veículo em caso de batida, incêndio, roubo ou furto." },
-      { "titulo": "Danos a terceiros", "texto": "Paga os prejuízos materiais e corporais que você causar a outras pessoas num acidente." },
-      { "titulo": "Assistência 24 horas", "texto": "Guincho, pane seca, troca de pneu, chaveiro e socorro mecânico em todo o território nacional." },
-      { "titulo": "Carro reserva", "texto": "Um veículo para você usar enquanto o seu está na oficina após um sinistro coberto." },
-      { "titulo": "Vidros, faróis e retrovisores", "texto": "Troca ou reparo com franquia reduzida, sem afetar o bônus da apólice." },
-      { "titulo": "Acidentes pessoais de passageiros", "texto": "Indenização por morte ou invalidez e reembolso de despesas médicas dos ocupantes do veículo." }
+      {
+        "titulo": "Colisão, incêndio e roubo",
+        "texto": "A cobertura compreensiva: indeniza o veículo em caso de batida, incêndio, roubo ou furto."
+      },
+      {
+        "titulo": "Danos a terceiros",
+        "texto": "Paga os prejuízos materiais e corporais que você causar a outras pessoas num acidente."
+      },
+      {
+        "titulo": "Assistência 24 horas",
+        "texto": "Guincho, pane seca, troca de pneu, chaveiro e socorro mecânico em todo o território nacional."
+      },
+      {
+        "titulo": "Carro reserva",
+        "texto": "Um veículo para você usar enquanto o seu está na oficina após um sinistro coberto."
+      },
+      {
+        "titulo": "Vidros, faróis e retrovisores",
+        "texto": "Troca ou reparo com franquia reduzida, sem afetar o bônus da apólice."
+      },
+      {
+        "titulo": "Acidentes pessoais de passageiros",
+        "texto": "Indenização por morte ou invalidez e reembolso de despesas médicas dos ocupantes do veículo."
+      }
     ],
     "idealPara": [
       "Carros de uso pessoal e familiar, novos ou usados",
@@ -123,9 +222,18 @@
       "Renovar sem sinistro gera bônus que reduz o preço nos anos seguintes, e ele acompanha você se trocar de seguradora."
     ],
     "faq": [
-      { "p": "O que é cobertura compreensiva?", "r": "É a mais completa: cobre colisão, incêndio, roubo e furto do seu veículo, além de danos a terceiros e assistência. Existem opções mais básicas, como só roubo e incêndio ou só terceiros, para quem quer pagar menos." },
-      { "p": "Carro usado ou antigo pode ser segurado?", "r": "Sim. A maioria das seguradoras aceita veículos com até 20 ou 25 anos, e alguns aceitam mais. O valor da indenização segue a tabela FIPE do mês do sinistro." },
-      { "p": "Como funciona em caso de batida?", "r": "Você entra em contato com a gente e nós abrimos o sinistro na seguradora, orientamos sobre a documentação e acompanhamos o conserto até a entrega do carro. A assistência 24h da seguradora atende no local da ocorrência." }
+      {
+        "p": "O que é cobertura compreensiva?",
+        "r": "É a mais completa: cobre colisão, incêndio, roubo e furto do seu veículo, além de danos a terceiros e assistência. Existem opções mais básicas, como só roubo e incêndio ou só terceiros, para quem quer pagar menos."
+      },
+      {
+        "p": "Carro usado ou antigo pode ser segurado?",
+        "r": "Sim. A maioria das seguradoras aceita veículos com até 20 ou 25 anos, e alguns aceitam mais. O valor da indenização segue a tabela FIPE do mês do sinistro."
+      },
+      {
+        "p": "Como funciona em caso de batida?",
+        "r": "Você entra em contato com a gente e nós abrimos o sinistro na seguradora, orientamos sobre a documentação e acompanhamos o conserto até a entrega do carro. A assistência 24h da seguradora atende no local da ocorrência."
+      }
     ]
   },
   {
@@ -142,17 +250,44 @@
       "O seguro de eletrônicos cobre o conserto ou a reposição do aparelho, por um valor mensal pequeno em relação ao que ele custa. Cotamos em mais de uma seguradora para achar a melhor condição."
     ],
     "destaques": [
-      { "valor": "48h", "texto": "prazo médio para análise do sinistro" },
-      { "valor": "100%", "texto": "online: contratação e acionamento pelo celular" },
-      { "valor": "+5", "texto": "tipos de aparelho aceitos" }
+      {
+        "valor": "48h",
+        "texto": "prazo médio para análise do sinistro"
+      },
+      {
+        "valor": "100%",
+        "texto": "online: contratação e acionamento pelo celular"
+      },
+      {
+        "valor": "+5",
+        "texto": "tipos de aparelho aceitos"
+      }
     ],
     "coberturas": [
-      { "titulo": "Quebra acidental", "texto": "Tela trincada, queda e danos por impacto, a causa mais comum de prejuízo com celulares." },
-      { "titulo": "Roubo e furto qualificado", "texto": "Reposição do aparelho em caso de roubo com violência ou furto com arrombamento." },
-      { "titulo": "Danos por líquido", "texto": "Oxidação e falhas causadas por água, café ou chuva, que a garantia do fabricante não cobre." },
-      { "titulo": "Danos elétricos", "texto": "Queima por curto-circuito, oscilação de energia ou raio durante o carregamento." },
-      { "titulo": "Cobertura em viagens", "texto": "A proteção vale também fora de casa e, conforme a apólice, fora do país." },
-      { "titulo": "Reposição por aparelho novo", "texto": "Em caso de perda total, você recebe um aparelho equivalente ou o valor para comprar outro." }
+      {
+        "titulo": "Quebra acidental",
+        "texto": "Tela trincada, queda e danos por impacto, a causa mais comum de prejuízo com celulares."
+      },
+      {
+        "titulo": "Roubo e furto qualificado",
+        "texto": "Reposição do aparelho em caso de roubo com violência ou furto com arrombamento."
+      },
+      {
+        "titulo": "Danos por líquido",
+        "texto": "Oxidação e falhas causadas por água, café ou chuva, que a garantia do fabricante não cobre."
+      },
+      {
+        "titulo": "Danos elétricos",
+        "texto": "Queima por curto-circuito, oscilação de energia ou raio durante o carregamento."
+      },
+      {
+        "titulo": "Cobertura em viagens",
+        "texto": "A proteção vale também fora de casa e, conforme a apólice, fora do país."
+      },
+      {
+        "titulo": "Reposição por aparelho novo",
+        "texto": "Em caso de perda total, você recebe um aparelho equivalente ou o valor para comprar outro."
+      }
     ],
     "idealPara": [
       "Celulares e notebooks de alto valor, novos ou seminovos",
@@ -166,9 +301,18 @@
       "Furto simples, quando o aparelho é levado sem violência ou arrombamento, normalmente não é coberto. Confira essa diferença na proposta."
     ],
     "faq": [
-      { "p": "Posso segurar um celular que já tenho há um tempo?", "r": "Depende da idade do aparelho. A maior parte das seguradoras aceita aparelhos com até 12 meses da nota fiscal; algumas vão além. Na cotação, verificamos as opções disponíveis para o seu modelo." },
-      { "p": "A garantia do fabricante não resolve?", "r": "A garantia cobre defeitos de fabricação, não acidentes. Tela quebrada, queda, água e roubo ficam de fora dela, e é justamente isso que o seguro cobre." },
-      { "p": "Como aciono o seguro se quebrar a tela?", "r": "Você comunica o sinistro pelo aplicativo ou site da seguradora, envia fotos e a nota fiscal, e a seguradora indica a assistência técnica ou faz a reposição. A gente acompanha o processo com você." }
+      {
+        "p": "Posso segurar um celular que já tenho há um tempo?",
+        "r": "Depende da idade do aparelho. A maior parte das seguradoras aceita aparelhos com até 12 meses da nota fiscal; algumas vão além. Na cotação, verificamos as opções disponíveis para o seu modelo."
+      },
+      {
+        "p": "A garantia do fabricante não resolve?",
+        "r": "A garantia cobre defeitos de fabricação, não acidentes. Tela quebrada, queda, água e roubo ficam de fora dela, e é justamente isso que o seguro cobre."
+      },
+      {
+        "p": "Como aciono o seguro se quebrar a tela?",
+        "r": "Você comunica o sinistro pelo aplicativo ou site da seguradora, envia fotos e a nota fiscal, e a seguradora indica a assistência técnica ou faz a reposição. A gente acompanha o processo com você."
+      }
     ]
   },
   {
@@ -185,17 +329,44 @@
       "Comparamos os planos de várias seguradoras conforme o destino, a duração e o perfil da viagem, de um fim de semana no Brasil a um intercâmbio de um ano."
     ],
     "destaques": [
-      { "valor": "24h", "texto": "central de atendimento em português" },
-      { "valor": "€30 mil", "texto": "cobertura mínima exigida na Europa, já incluída" },
-      { "valor": "1 min", "texto": "para emitir a apólice, até no aeroporto" }
+      {
+        "valor": "24h",
+        "texto": "central de atendimento em português"
+      },
+      {
+        "valor": "€30 mil",
+        "texto": "cobertura mínima exigida na Europa, já incluída"
+      },
+      {
+        "valor": "1 min",
+        "texto": "para emitir a apólice, até no aeroporto"
+      }
     ],
     "coberturas": [
-      { "titulo": "Despesas médicas e hospitalares", "texto": "Consultas, exames, internação e medicamentos em caso de doença ou acidente durante a viagem." },
-      { "titulo": "Despesas odontológicas", "texto": "Atendimento de urgência para dor ou trauma dental." },
-      { "titulo": "Extravio e atraso de bagagem", "texto": "Indenização se a mala for perdida pela companhia aérea e reembolso de itens essenciais em caso de atraso." },
-      { "titulo": "Cancelamento e interrupção", "texto": "Reembolso de passagens e reservas não reembolsáveis se você precisar cancelar ou voltar antes por motivo coberto." },
-      { "titulo": "Regresso sanitário e traslado", "texto": "Transporte de volta ao Brasil com acompanhamento médico, se necessário." },
-      { "titulo": "Assistência jurídica e documentos", "texto": "Apoio em caso de perda de passaporte, problemas legais e adiantamento de fiança." }
+      {
+        "titulo": "Despesas médicas e hospitalares",
+        "texto": "Consultas, exames, internação e medicamentos em caso de doença ou acidente durante a viagem."
+      },
+      {
+        "titulo": "Despesas odontológicas",
+        "texto": "Atendimento de urgência para dor ou trauma dental."
+      },
+      {
+        "titulo": "Extravio e atraso de bagagem",
+        "texto": "Indenização se a mala for perdida pela companhia aérea e reembolso de itens essenciais em caso de atraso."
+      },
+      {
+        "titulo": "Cancelamento e interrupção",
+        "texto": "Reembolso de passagens e reservas não reembolsáveis se você precisar cancelar ou voltar antes por motivo coberto."
+      },
+      {
+        "titulo": "Regresso sanitário e traslado",
+        "texto": "Transporte de volta ao Brasil com acompanhamento médico, se necessário."
+      },
+      {
+        "titulo": "Assistência jurídica e documentos",
+        "texto": "Apoio em caso de perda de passaporte, problemas legais e adiantamento de fiança."
+      }
     ],
     "idealPara": [
       "Viagens internacionais de lazer, inclusive países que exigem o seguro",
@@ -209,9 +380,18 @@
       "Gestantes e pessoas acima de 70 anos têm planos específicos. Informe na cotação para indicarmos o plano certo."
     ],
     "faq": [
-      { "p": "Meu cartão de crédito já dá seguro viagem. Preciso de outro?", "r": "Alguns cartões oferecem seguro quando a passagem é paga com ele, mas as coberturas costumam ser limitadas e com regras específicas. Vale comparar: muitas vezes um plano contratado à parte cobre mais por um valor baixo. A gente ajuda a avaliar." },
-      { "p": "Posso contratar depois de já estar viajando?", "r": "Em geral, não: o seguro precisa ser contratado antes do embarque. Algumas seguradoras aceitam contratação durante a viagem com carência, mas o ideal é fechar antes de sair." },
-      { "p": "Como funciona o atendimento médico fora do país?", "r": "Você liga para a central da seguradora, que indica o hospital ou clínica da rede e, na maioria dos casos, paga direto o atendimento. Se precisar pagar algo, guarda os recibos e pede reembolso ao voltar." }
+      {
+        "p": "Meu cartão de crédito já dá seguro viagem. Preciso de outro?",
+        "r": "Alguns cartões oferecem seguro quando a passagem é paga com ele, mas as coberturas costumam ser limitadas e com regras específicas. Vale comparar: muitas vezes um plano contratado à parte cobre mais por um valor baixo. A gente ajuda a avaliar."
+      },
+      {
+        "p": "Posso contratar depois de já estar viajando?",
+        "r": "Em geral, não: o seguro precisa ser contratado antes do embarque. Algumas seguradoras aceitam contratação durante a viagem com carência, mas o ideal é fechar antes de sair."
+      },
+      {
+        "p": "Como funciona o atendimento médico fora do país?",
+        "r": "Você liga para a central da seguradora, que indica o hospital ou clínica da rede e, na maioria dos casos, paga direto o atendimento. Se precisar pagar algo, guarda os recibos e pede reembolso ao voltar."
+      }
     ]
   },
   {
@@ -228,17 +408,44 @@
       "Trabalhamos tanto com os seguros obrigatórios para transportadores quanto com as apólices do embarcador, montando a combinação certa para a sua operação."
     ],
     "destaques": [
-      { "valor": "3", "texto": "modais: rodoviário, aéreo e marítimo" },
-      { "valor": "100%", "texto": "do trajeto coberto, da coleta à entrega" },
-      { "valor": "0", "texto": "surpresas: averbação simplificada" }
+      {
+        "valor": "3",
+        "texto": "modais: rodoviário, aéreo e marítimo"
+      },
+      {
+        "valor": "100%",
+        "texto": "do trajeto coberto, da coleta à entrega"
+      },
+      {
+        "valor": "0",
+        "texto": "surpresas: averbação simplificada"
+      }
     ],
     "coberturas": [
-      { "titulo": "RCTR-C", "texto": "Seguro obrigatório do transportador rodoviário: cobre danos à carga por colisão, capotagem, incêndio e explosão do veículo." },
-      { "titulo": "RC-DC", "texto": "Cobre roubo e desaparecimento da carga, o risco mais frequente no transporte rodoviário no Brasil." },
-      { "titulo": "Seguro de transporte nacional", "texto": "Contratado pelo dono da mercadoria, cobre a carga contra avarias e perdas em qualquer transportador." },
-      { "titulo": "Transporte internacional", "texto": "Importação e exportação, com cobertura porto a porto ou porta a porta." },
-      { "titulo": "Carga e descarga", "texto": "Danos durante as operações de içamento, movimentação e armazenagem temporária." },
-      { "titulo": "Gerenciamento de risco", "texto": "Rastreamento, escolta e consulta de motoristas, que reduzem o risco e o preço do seguro." }
+      {
+        "titulo": "RCTR-C",
+        "texto": "Seguro obrigatório do transportador rodoviário: cobre danos à carga por colisão, capotagem, incêndio e explosão do veículo."
+      },
+      {
+        "titulo": "RC-DC",
+        "texto": "Cobre roubo e desaparecimento da carga, o risco mais frequente no transporte rodoviário no Brasil."
+      },
+      {
+        "titulo": "Seguro de transporte nacional",
+        "texto": "Contratado pelo dono da mercadoria, cobre a carga contra avarias e perdas em qualquer transportador."
+      },
+      {
+        "titulo": "Transporte internacional",
+        "texto": "Importação e exportação, com cobertura porto a porto ou porta a porta."
+      },
+      {
+        "titulo": "Carga e descarga",
+        "texto": "Danos durante as operações de içamento, movimentação e armazenagem temporária."
+      },
+      {
+        "titulo": "Gerenciamento de risco",
+        "texto": "Rastreamento, escolta e consulta de motoristas, que reduzem o risco e o preço do seguro."
+      }
     ],
     "idealPara": [
       "Transportadoras de qualquer porte",
@@ -252,9 +459,18 @@
       "Um bom plano de gerenciamento de risco pode reduzir bastante o custo do seguro. A gente ajuda a estruturar."
     ],
     "faq": [
-      { "p": "Sou autônomo. Preciso de seguro de carga?", "r": "Sim. O RCTR-C é obrigatório para quem transporta carga de terceiros, mesmo com um único caminhão. Além dele, muitos embarcadores exigem o RC-DC para contratar o frete." },
-      { "p": "Qual a diferença entre o seguro do transportador e o do embarcador?", "r": "O do transportador (RCTR-C e RC-DC) cobre a responsabilidade dele pelos danos à carga que transporta. O do embarcador cobre a mercadoria em si, independentemente de quem transporta e de culpa. Muitas operações precisam dos dois." },
-      { "p": "Como funciona a averbação?", "r": "Averbar é informar à seguradora cada embarque coberto. Com a averbação eletrônica, isso é feito automaticamente a partir dos documentos fiscais, sem trabalho manual." }
+      {
+        "p": "Sou autônomo. Preciso de seguro de carga?",
+        "r": "Sim. O RCTR-C é obrigatório para quem transporta carga de terceiros, mesmo com um único caminhão. Além dele, muitos embarcadores exigem o RC-DC para contratar o frete."
+      },
+      {
+        "p": "Qual a diferença entre o seguro do transportador e o do embarcador?",
+        "r": "O do transportador (RCTR-C e RC-DC) cobre a responsabilidade dele pelos danos à carga que transporta. O do embarcador cobre a mercadoria em si, independentemente de quem transporta e de culpa. Muitas operações precisam dos dois."
+      },
+      {
+        "p": "Como funciona a averbação?",
+        "r": "Averbar é informar à seguradora cada embarque coberto. Com a averbação eletrônica, isso é feito automaticamente a partir dos documentos fiscais, sem trabalho manual."
+      }
     ]
   },
   {
@@ -271,17 +487,44 @@
       "Montamos a cobertura conforme o uso, seja passeio, deslocamento diário ou trabalho, com opções que vão da proteção contra roubo até o seguro completo com terceiros e assistência."
     ],
     "destaques": [
-      { "valor": "24h", "texto": "guincho e assistência em todo o país" },
-      { "valor": "+5", "texto": "seguradoras comparadas, inclusive para motos usadas" },
-      { "valor": "0", "texto": "burocracia: contratação e sinistro digitais" }
+      {
+        "valor": "24h",
+        "texto": "guincho e assistência em todo o país"
+      },
+      {
+        "valor": "+5",
+        "texto": "seguradoras comparadas, inclusive para motos usadas"
+      },
+      {
+        "valor": "0",
+        "texto": "burocracia: contratação e sinistro digitais"
+      }
     ],
     "coberturas": [
-      { "titulo": "Roubo e furto", "texto": "Indenização pelo valor da tabela FIPE em caso de roubo ou furto da moto." },
-      { "titulo": "Colisão e incêndio", "texto": "Conserto ou indenização em caso de acidente, queda ou incêndio." },
-      { "titulo": "Danos a terceiros", "texto": "Prejuízos materiais e corporais causados a outras pessoas num acidente." },
-      { "titulo": "Acidentes pessoais", "texto": "Indenização por morte ou invalidez do condutor e reembolso de despesas médicas." },
-      { "titulo": "Assistência 24 horas", "texto": "Guincho, socorro mecânico, troca de pneu e chaveiro em todo o território nacional." },
-      { "titulo": "Acessórios e equipamentos", "texto": "Cobertura opcional para baú, capacete e outros acessórios declarados." }
+      {
+        "titulo": "Roubo e furto",
+        "texto": "Indenização pelo valor da tabela FIPE em caso de roubo ou furto da moto."
+      },
+      {
+        "titulo": "Colisão e incêndio",
+        "texto": "Conserto ou indenização em caso de acidente, queda ou incêndio."
+      },
+      {
+        "titulo": "Danos a terceiros",
+        "texto": "Prejuízos materiais e corporais causados a outras pessoas num acidente."
+      },
+      {
+        "titulo": "Acidentes pessoais",
+        "texto": "Indenização por morte ou invalidez do condutor e reembolso de despesas médicas."
+      },
+      {
+        "titulo": "Assistência 24 horas",
+        "texto": "Guincho, socorro mecânico, troca de pneu e chaveiro em todo o território nacional."
+      },
+      {
+        "titulo": "Acessórios e equipamentos",
+        "texto": "Cobertura opcional para baú, capacete e outros acessórios declarados."
+      }
     ],
     "idealPara": [
       "Motos de passeio e de uso diário",
@@ -295,9 +538,18 @@
       "Se a sua moto for recusada em uma seguradora, outras podem aceitar. É por isso que cotamos em várias."
     ],
     "faq": [
-      { "p": "Toda moto consegue seguro?", "r": "A maioria sim, mas cada seguradora tem sua lista de modelos aceitos e regras de idade do veículo. Como trabalhamos com várias, conseguimos opção para a grande maioria dos casos, inclusive motos usadas." },
-      { "p": "Existe seguro só contra roubo?", "r": "Sim. A cobertura de roubo e furto pode ser contratada sozinha, com preço bem menor que o seguro completo. É uma boa opção para quem quer proteger o principal risco." },
-      { "p": "Uso a moto para entregas. O seguro cobre?", "r": "Cobre, desde que o uso comercial seja informado na contratação. O preço é um pouco maior, mas é a única forma de garantir a indenização em caso de sinistro durante o trabalho." }
+      {
+        "p": "Toda moto consegue seguro?",
+        "r": "A maioria sim, mas cada seguradora tem sua lista de modelos aceitos e regras de idade do veículo. Como trabalhamos com várias, conseguimos opção para a grande maioria dos casos, inclusive motos usadas."
+      },
+      {
+        "p": "Existe seguro só contra roubo?",
+        "r": "Sim. A cobertura de roubo e furto pode ser contratada sozinha, com preço bem menor que o seguro completo. É uma boa opção para quem quer proteger o principal risco."
+      },
+      {
+        "p": "Uso a moto para entregas. O seguro cobre?",
+        "r": "Cobre, desde que o uso comercial seja informado na contratação. O preço é um pouco maior, mas é a única forma de garantir a indenização em caso de sinistro durante o trabalho."
+      }
     ]
   },
   {
@@ -314,17 +566,44 @@
       "Atendemos de pequenos comércios e escritórios a indústrias, comparando as seguradoras para encontrar a proteção certa pelo melhor custo."
     ],
     "destaques": [
-      { "valor": "+10", "texto": "coberturas combináveis conforme a atividade" },
-      { "valor": "24h", "texto": "assistência para a empresa" },
-      { "valor": "1", "texto": "apólice para patrimônio, equipe e clientes" }
+      {
+        "valor": "+10",
+        "texto": "coberturas combináveis conforme a atividade"
+      },
+      {
+        "valor": "24h",
+        "texto": "assistência para a empresa"
+      },
+      {
+        "valor": "1",
+        "texto": "apólice para patrimônio, equipe e clientes"
+      }
     ],
     "coberturas": [
-      { "titulo": "Incêndio, raio e explosão", "texto": "Cobertura básica para o imóvel, as instalações, os equipamentos e o estoque." },
-      { "titulo": "Roubo e furto qualificado", "texto": "Mercadorias, equipamentos e valores em caixa ou em trânsito." },
-      { "titulo": "Responsabilidade civil", "texto": "Danos a clientes, fornecedores e terceiros dentro ou por causa da operação da empresa." },
-      { "titulo": "Lucros cessantes", "texto": "Repõe o faturamento perdido enquanto a empresa fica parada após um sinistro coberto." },
-      { "titulo": "Danos elétricos e equipamentos", "texto": "Queima de máquinas, computadores e sistemas por problemas na rede elétrica." },
-      { "titulo": "Vendaval, alagamento e quebra de vidros", "texto": "Danos ao prédio, à fachada e às vitrines causados por clima ou acidente." }
+      {
+        "titulo": "Incêndio, raio e explosão",
+        "texto": "Cobertura básica para o imóvel, as instalações, os equipamentos e o estoque."
+      },
+      {
+        "titulo": "Roubo e furto qualificado",
+        "texto": "Mercadorias, equipamentos e valores em caixa ou em trânsito."
+      },
+      {
+        "titulo": "Responsabilidade civil",
+        "texto": "Danos a clientes, fornecedores e terceiros dentro ou por causa da operação da empresa."
+      },
+      {
+        "titulo": "Lucros cessantes",
+        "texto": "Repõe o faturamento perdido enquanto a empresa fica parada após um sinistro coberto."
+      },
+      {
+        "titulo": "Danos elétricos e equipamentos",
+        "texto": "Queima de máquinas, computadores e sistemas por problemas na rede elétrica."
+      },
+      {
+        "titulo": "Vendaval, alagamento e quebra de vidros",
+        "texto": "Danos ao prédio, à fachada e às vitrines causados por clima ou acidente."
+      }
     ],
     "idealPara": [
       "Lojas, restaurantes e prestadores de serviço",
@@ -338,9 +617,255 @@
       "A seguradora pode pedir vistoria ou medidas de segurança, como extintores e alarme, que também ajudam a reduzir o preço."
     ],
     "faq": [
-      { "p": "Minha empresa é pequena. Vale a pena?", "r": "Sim, e é justamente nas empresas menores que um sinistro faz mais falta, porque não há caixa para absorver o prejuízo. Existem apólices simplificadas para pequenos negócios, com preço acessível." },
-      { "p": "O seguro cobre acidentes com clientes dentro da loja?", "r": "Com a cobertura de responsabilidade civil, sim. Ela cobre danos materiais e corporais causados a terceiros por causa da operação, como uma queda dentro do estabelecimento." },
-      { "p": "Equipamentos e estoque entram no seguro?", "r": "Entram. Você declara o valor dos equipamentos, do mobiliário e do estoque, e eles ficam cobertos contra incêndio, roubo e os demais riscos contratados. Mantenha um inventário atualizado para facilitar qualquer indenização." }
+      {
+        "p": "Minha empresa é pequena. Vale a pena?",
+        "r": "Sim, e é justamente nas empresas menores que um sinistro faz mais falta, porque não há caixa para absorver o prejuízo. Existem apólices simplificadas para pequenos negócios, com preço acessível."
+      },
+      {
+        "p": "O seguro cobre acidentes com clientes dentro da loja?",
+        "r": "Com a cobertura de responsabilidade civil, sim. Ela cobre danos materiais e corporais causados a terceiros por causa da operação, como uma queda dentro do estabelecimento."
+      },
+      {
+        "p": "Equipamentos e estoque entram no seguro?",
+        "r": "Entram. Você declara o valor dos equipamentos, do mobiliário e do estoque, e eles ficam cobertos contra incêndio, roubo e os demais riscos contratados. Mantenha um inventário atualizado para facilitar qualquer indenização."
+      }
+    ]
+  },
+  {
+    "slug": "seguro-responsabilidade-civil-geral",
+    "nome": "Seguro de Responsabilidade Civil Geral",
+    "curto": "RC Geral",
+    "opcaoFormulario": "Responsabilidade Civil Geral",
+    "cor": "navy",
+    "titulo": "Seguro de Responsabilidade Civil Geral para empresas | MS Corretora",
+    "descricao": "Seguro de responsabilidade civil para empresas: danos a terceiros nas operações, por produtos e acidentes de trabalho, com custos de defesa. Cote com a MS.",
+    "h1": "Responsabilidade Civil Geral: sua empresa protegida contra <span>imprevistos</span> com terceiros",
+    "intro": [
+      "Um cliente que escorrega na loja, um produto que causa um acidente, um funcionário que se machuca no trabalho: qualquer dano causado a outras pessoas pode virar um processo e uma indenização alta. O seguro de Responsabilidade Civil Geral paga essas indenizações e os custos de defesa no lugar da empresa.",
+      "Montamos a cobertura conforme a atividade da empresa, combinando operações, produtos, empregador e outras extensões, com o limite de indenização adequado ao tamanho do risco."
+    ],
+    "destaques": [
+      {
+        "valor": "3",
+        "texto": "frentes cobertas: operações, produtos e empregador"
+      },
+      {
+        "valor": "+5",
+        "texto": "seguradoras comparadas na cotação"
+      },
+      {
+        "valor": "1",
+        "texto": "apólice que complementa o seguro empresarial"
+      }
+    ],
+    "coberturas": [
+      {
+        "titulo": "RC Operações",
+        "texto": "Danos materiais e corporais causados a terceiros pelas atividades da empresa e dentro do estabelecimento."
+      },
+      {
+        "titulo": "RC Produtos",
+        "texto": "Danos causados a consumidores por produtos fabricados, distribuídos ou vendidos pela empresa, depois de entregues."
+      },
+      {
+        "titulo": "RC Empregador",
+        "texto": "Indenizações que a empresa precisar pagar a funcionários acidentados no trabalho, além do que cobre o INSS."
+      },
+      {
+        "titulo": "Serviços em locais de terceiros",
+        "texto": "Danos causados enquanto a equipe presta serviço na casa ou na empresa do cliente, como numa instalação ou reforma."
+      },
+      {
+        "titulo": "Guarda de veículos",
+        "texto": "Para estacionamentos, oficinas e lava-rápidos: danos e roubo de veículos de clientes sob a guarda da empresa."
+      },
+      {
+        "titulo": "Danos morais e custos de defesa",
+        "texto": "Honorários de advogados, custas processuais e indenizações por danos morais ligados ao sinistro coberto."
+      }
+    ],
+    "idealPara": [
+      "Lojas, restaurantes e estabelecimentos que recebem público",
+      "Indústrias, distribuidores e importadores",
+      "Prestadores de serviço que trabalham em locais de clientes",
+      "Condomínios, estacionamentos, escolas e organizadores de eventos"
+    ],
+    "bomSaber": [
+      "O seguro empresarial protege os bens da própria empresa; o de Responsabilidade Civil protege contra o que a empresa causa a outras pessoas. Os dois se complementam e costumam ser contratados juntos.",
+      "O limite máximo de indenização é escolhido na contratação e deve refletir o pior cenário realista da atividade, não só o mais comum.",
+      "Danos causados de propósito não são cobertos. O seguro existe para acidentes e situações involuntárias."
+    ],
+    "faq": [
+      {
+        "p": "Minha empresa já tem seguro empresarial. Preciso também de RC?",
+        "r": "Na maioria dos casos, sim. O seguro empresarial cobre os bens da própria empresa, como imóvel, equipamentos e estoque. A Responsabilidade Civil cobre os danos que a empresa causa a terceiros. Algumas apólices empresariais trazem uma cobertura básica de RC, mas com limites baixos; na cotação, avaliamos se é suficiente para a sua atividade."
+      },
+      {
+        "p": "Qual a diferença entre RC Geral e RC Profissional (E&O)?",
+        "r": "A RC Geral cobre danos materiais e corporais, como uma pessoa ferida ou um bem danificado. A RC Profissional cobre prejuízos financeiros causados por erros na prestação de um serviço técnico, como um parecer equivocado ou uma falha de projeto. Muitas empresas precisam das duas."
+      },
+      {
+        "p": "Como é definido o preço?",
+        "r": "Depende principalmente da atividade da empresa, do faturamento, do número de funcionários, do histórico de sinistros e do limite de indenização escolhido. Por isso cada cotação é feita sob medida, comparando as seguradoras que atendem aquele tipo de risco."
+      }
+    ]
+  },
+  {
+    "slug": "seguro-d-o",
+    "nome": "Seguro D&O",
+    "curto": "D&O",
+    "opcaoFormulario": "D&O (Diretores e Administradores)",
+    "cor": "orange",
+    "titulo": "Seguro D&O para diretores e administradores | MS Corretora",
+    "descricao": "Seguro D&O protege o patrimônio pessoal de diretores, conselheiros e sócios-administradores contra processos por atos de gestão. Cote com a MS Corretora.",
+    "h1": "Seguro D&amp;O: proteção para quem <span>decide</span> pela empresa",
+    "intro": [
+      "Quem administra uma empresa pode ter o próprio patrimônio, como casa, carro e conta bancária, atingido por processos ligados às decisões que tomou no cargo. Isso vale para ações de sócios, clientes, órgãos reguladores, e para dívidas trabalhistas e tributárias cobradas pessoalmente do gestor. O seguro D&O (Directors and Officers) arca com a defesa e as indenizações no lugar dele.",
+      "A apólice é contratada pela empresa e protege toda a diretoria, o conselho e os gestores de uma vez, inclusive quem já saiu do cargo e quem ainda vai entrar."
+    ],
+    "destaques": [
+      {
+        "valor": "100%",
+        "texto": "foco no patrimônio pessoal dos administradores"
+      },
+      {
+        "valor": "1",
+        "texto": "apólice para toda a diretoria e o conselho"
+      },
+      {
+        "valor": "+5",
+        "texto": "seguradoras comparadas na cotação"
+      }
+    ],
+    "coberturas": [
+      {
+        "titulo": "Custos de defesa",
+        "texto": "Honorários de advogados e custas em processos judiciais, arbitrais e administrativos, pagos desde o início do processo."
+      },
+      {
+        "titulo": "Indenizações e acordos",
+        "texto": "Valores que o administrador for condenado a pagar ou que forem acordados, com aprovação da seguradora."
+      },
+      {
+        "titulo": "Bloqueio de bens",
+        "texto": "Despesas pessoais essenciais quando bens ou contas do administrador são bloqueados por decisão judicial."
+      },
+      {
+        "titulo": "Desconsideração da personalidade jurídica",
+        "texto": "Proteção quando dívidas trabalhistas, tributárias ou com consumidores são cobradas diretamente do patrimônio do gestor."
+      },
+      {
+        "titulo": "Processos de órgãos reguladores",
+        "texto": "Defesa em investigações e processos de órgãos como CVM, Banco Central, Procon e tribunais de contas."
+      },
+      {
+        "titulo": "Gerenciamento de crise e imagem",
+        "texto": "Assessoria de comunicação para proteger a reputação do administrador durante uma reclamação coberta."
+      }
+    ],
+    "idealPara": [
+      "Sócios-administradores de empresas de qualquer porte, inclusive familiares",
+      "Startups e empresas com investidores ou conselho",
+      "Cooperativas, associações, fundações e ONGs",
+      "Síndicos de condomínios e gestores de entidades"
+    ],
+    "bomSaber": [
+      "A apólice funciona à base de reclamação: cobre pedidos feitos durante a vigência, inclusive sobre atos anteriores, conforme a data de retroatividade contratada. Por isso é importante renovar sem interrupção.",
+      "Atos dolosos, fraudes e benefícios pessoais obtidos de forma ilegal não são cobertos. O seguro protege decisões de boa-fé que deram errado ou foram contestadas.",
+      "Empresas pequenas também precisam: na prática, a cobrança pessoal de dívidas trabalhistas e tributárias atinge com frequência os sócios-administradores."
+    ],
+    "faq": [
+      {
+        "p": "Quem fica protegido pelo seguro D&O?",
+        "r": "Diretores, conselheiros, sócios-administradores e gerentes com poder de decisão, conforme definido na apólice. Em geral, a proteção se estende a ex-administradores, a quem assumir o cargo durante a vigência e, em alguns casos, a cônjuges e herdeiros quando o processo atinge o patrimônio da família."
+      },
+      {
+        "p": "Minha empresa é pequena. O D&O faz sentido?",
+        "r": "Faz. Em empresas menores, o sócio-administrador costuma concentrar as decisões, e a Justiça pode estender dívidas da empresa ao patrimônio pessoal dele. Existem apólices de D&O com valores acessíveis para pequenas e médias empresas."
+      },
+      {
+        "p": "Qual a diferença entre D&O e E&O?",
+        "r": "O D&O protege os administradores por decisões de gestão, como um contrato mal negociado ou uma falha de controle. O E&O protege a empresa e os profissionais por erros na prestação de um serviço técnico ao cliente. São seguros diferentes e um não substitui o outro."
+      }
+    ]
+  },
+  {
+    "slug": "seguro-e-o",
+    "nome": "Seguro E&O",
+    "curto": "E&O",
+    "opcaoFormulario": "E&O (Responsabilidade Profissional)",
+    "cor": "navy",
+    "titulo": "Seguro E&O de Responsabilidade Civil Profissional | MS Corretora",
+    "descricao": "Seguro E&O protege profissionais e empresas contra reclamações por erros, negligência ou omissão na prestação de serviços. Peça sua cotação com a MS Corretora.",
+    "h1": "Seguro E&amp;O: proteção para quem presta <span>serviços</span>",
+    "intro": [
+      "Mesmo os melhores profissionais erram: um cálculo, um prazo, um parecer, uma linha de código. Quando esse erro causa prejuízo a um cliente, ele pode pedir indenização. O seguro E&O (Errors and Omissions), ou Responsabilidade Civil Profissional, paga a defesa e as indenizações por falhas, negligência, imprudência ou imperícia na prestação do serviço.",
+      "Montamos a apólice de acordo com a profissão, o faturamento e os contratos da empresa, e comparamos as seguradoras especializadas em cada área."
+    ],
+    "destaques": [
+      {
+        "valor": "1",
+        "texto": "apólice para a empresa, os sócios e a equipe"
+      },
+      {
+        "valor": "+5",
+        "texto": "seguradoras comparadas na cotação"
+      },
+      {
+        "valor": "0",
+        "texto": "surpresa com advogados: custos de defesa incluídos"
+      }
+    ],
+    "coberturas": [
+      {
+        "titulo": "Custos de defesa",
+        "texto": "Honorários advocatícios, perícias e custas processuais para se defender de uma reclamação, mesmo quando ela é infundada."
+      },
+      {
+        "titulo": "Indenizações e acordos",
+        "texto": "Prejuízos financeiros do cliente causados por erro, omissão ou negligência na prestação do serviço."
+      },
+      {
+        "titulo": "Atos de funcionários e terceirizados",
+        "texto": "Falhas cometidas pela equipe, por estagiários ou por subcontratados durante o serviço para o cliente."
+      },
+      {
+        "titulo": "Danos morais",
+        "texto": "Indenizações por danos morais decorrentes de um erro profissional coberto."
+      },
+      {
+        "titulo": "Perda de documentos",
+        "texto": "Custos para reconstituir documentos de clientes perdidos, extraviados ou danificados sob a guarda da empresa."
+      },
+      {
+        "titulo": "Violação de sigilo",
+        "texto": "Reclamações por quebra involuntária de confidencialidade de informações do cliente, conforme a apólice."
+      }
+    ],
+    "idealPara": [
+      "Advogados, contadores e consultores",
+      "Engenheiros, arquitetos e empresas de projetos",
+      "Empresas de tecnologia, desenvolvimento de software e marketing",
+      "Prestadores de serviço que têm contratos exigindo seguro profissional"
+    ],
+    "bomSaber": [
+      "Assim como o D&O, o E&O é à base de reclamação: cobre pedidos feitos durante a vigência, inclusive sobre serviços anteriores, conforme a data de retroatividade. Renovar sem interrupção mantém essa proteção.",
+      "Muitos contratos com empresas grandes e com o poder público exigem seguro E&O com um valor mínimo. Informe essa exigência na cotação para ajustarmos o limite.",
+      "O seguro não cobre erros intencionais nem promessas de resultado além do que a lei exige. Cobre falhas involuntárias no trabalho prestado."
+    ],
+    "faq": [
+      {
+        "p": "Quais profissões podem contratar o E&O?",
+        "r": "Praticamente todas que prestam serviços técnicos ou intelectuais: advogados, contadores, engenheiros, arquitetos, consultores, corretores, agências, empresas de TI, entre outras. Profissões da saúde, como médicos e dentistas, costumam ter uma modalidade específica de RC Profissional, que também cotamos."
+      },
+      {
+        "p": "O E&O cobre a empresa ou a pessoa?",
+        "r": "Pode cobrir os dois. A apólice pode ser contratada pela empresa, protegendo a pessoa jurídica, os sócios e a equipe, ou por um profissional autônomo, em nome próprio."
+      },
+      {
+        "p": "Qual a diferença entre E&O e RC Geral?",
+        "r": "O E&O cobre prejuízos financeiros que um erro profissional causa ao cliente, como uma multa por um prazo perdido ou uma falha num projeto. A RC Geral cobre danos materiais e corporais, como uma pessoa ferida ou um bem quebrado. As duas proteções se complementam."
+      }
     ]
   }
 ]
