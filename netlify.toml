@@ -62,16 +62,17 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# CSS e JS do site: 1 dia (uma mudança aparece para todos no máximo no dia seguinte)
+# CSS e JS do site: o navegador confere a cada visita se mudaram (resposta mínima quando não).
+# Assim uma atualização vale na hora para todos, sem misturar HTML novo com script antigo.
 [[headers]]
   for = "/styles/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # Imagens, ícones, fontes e bibliotecas: mudam raramente, 1 ano
 # (se trocar uma imagem, troque também o nome do arquivo)
